@@ -1,0 +1,35 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "New Challenge Ministries"
+relativeURLs = true
+
+[menu]
+  [[menu.main]]
+    identifier = "events"
+    name = "Events"
+    url = "/events/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "volunteer"
+    name = "Volunteer"
+    url = "/volunteer/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "corporate"
+    name = "Corporate"
+    url = "/corporate/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "donate"
+    name = "Donate"
+    url = "/donate/"
+    weight = 5
