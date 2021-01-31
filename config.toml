@@ -1,7 +1,13 @@
-baseURL = "http://example.org/"
+BaseURL = "https://www.mywebsite.com/"
 languageCode = "en-us"
 title = "New Challenge Ministries"
-relativeURLs = true
+theme = "goodtrepreneur"
+relativeURLS = true
+
+[module]
+  [[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "assets/js/bootstrap.bundle.min.js"
 
 [menu]
   [[menu.main]]
@@ -23,13 +29,7 @@ relativeURLs = true
     weight = 3
 
   [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
-    weight = 4
-
-  [[menu.main]]
     identifier = "donate"
     name = "Donate"
     url = "/donate/"
-    weight = 5
+    weight = 4
