@@ -4,3 +4,38 @@
     background-color: var(--bs-light);
     border-radius: .3rem;
 }
+
+.styled-align {
+	margin-left: 10px;	
+}
+
+.styled-text {
+	padding-bottom: 5px;
+}
+
+.styled-underline {
+  	border-bottom: 2px solid var(--underline-colour);
+}
+
+.logo {
+	height: var(--logo-height);
+	width: var(--logo-width);
+}
+
+.navigation {
+	background-color: var(--header-bg);
+}
+
+.donate-button { 
+	background-color: var(--donate-bg-colour);
+	border-radius: 6px;
+	border: none
+}
+
+.donate-button:hover {
+	background-color: var(donate-hover-colour);
+}
+
+.donate-button:active {
+	background-color: var(donate-active-colour);
+}
