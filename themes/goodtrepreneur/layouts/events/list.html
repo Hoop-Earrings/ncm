@@ -1,15 +1,41 @@
 {{ define "main" }}
 
+
 <div class = "container text-center">
+<!-- Iterate through pages -->
   {{ range .Pages}}
-    <h1>{{.Title}}</h1>
-    <p><span class="badge bg-success">Upcoming</span></p>
-    <img src="{{.Params.Image | absURL }}" alt="{{ .Title }}">
-    <p>
-      {{.Params.Date}}<br>
-      {{.Params.Location}}
-    </p>
+  <!-- Create card -->
+  <div class="card col-sm-10 col-md-8 col-lg-6 mx-auto mb-3">
+    <!-- Displays video if there is one specified else displays the image -->
+    {{ with .Param "video" }}
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class = "embed-responsive-item" src="{{.}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    {{ else }}
+      <img class = "card-img-top" src="{{.Params.Image | absURL }}" alt="{{ .Title }}">
+    {{ end }}
+    <!-- Establishes card body -->
+    <div class = "card-body">
+      <!-- Title -->
+      <h1 class = "card-title">{{.Title}}</h1>
+      <!-- Badge flagging if the event date is upcoming or in the past -->
+      {{ if (time .Params.Eventdate).After now }}
+        <p><span class="badge bg-success">Upcoming</span></p>
+      {{ else }}
+        <p><span class="badge bg-light text-dark">Past</span></p>
+      {{ end }}
+      <!-- Event date -->
+      <p class = "card-text">{{.Params.Eventdate}}</p>
+      <!-- Event time if specified -->
+      <p class = "card-text">{{ with .Param "starttime" }}{{.}}-{{"endtime"}}{{end}}</p>
+      <!-- Event time if specified -->
+      <p class = "card-text">{{ with .Param "location" }}{{.}}{{end}}</p>
+      <!-- Event description -->
+      <p class = "card-text">{{.Content}}</p>
+    </div>
+  </div>
   {{end}}
+
 </div>
 
 {{end}}
