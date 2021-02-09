@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-
 <div class = "container text-center">
 <!-- Iterate through pages -->
   {{ range .Pages}}
@@ -8,8 +7,8 @@
   <div class="card col-sm-10 col-md-8 col-lg-6 mx-auto mb-3">
     <!-- Displays video if there is one specified else displays the image -->
     {{ with .Param "video" }}
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class = "embed-responsive-item" src="{{.}}" frameborder="0" allowfullscreen></iframe>
+    <div class="ratio ratio-16x9">
+      <iframe src="{{.}}" allowfullscreen></iframe>
     </div>
     {{ else }}
       <img class = "card-img-top" src="{{.Params.Image | absURL }}" alt="{{ .Title }}">
@@ -28,10 +27,16 @@
       <p class = "card-text">{{.Params.Eventdate}}</p>
       <!-- Event time if specified -->
       <p class = "card-text">{{ with .Param "starttime" }}{{.}}-{{"endtime"}}{{end}}</p>
-      <!-- Event time if specified -->
+      <!-- Event location if specified -->
       <p class = "card-text">{{ with .Param "location" }}{{.}}{{end}}</p>
       <!-- Event description -->
       <p class = "card-text">{{.Content}}</p>
+      <!-- Call to action links -->
+      <div class="d-grid gap-2 d-md-block">
+        <a class="btn btn-primary" href="#" role="button">Receive</a>
+        <a class="btn btn-outline-primary" href="#" role="button">Donate</a>
+        <a class="btn btn-outline-primary" href="#" role="button">Register</a>
+      </div>
     </div>
   </div>
   {{end}}
