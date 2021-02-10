@@ -1,7 +1,72 @@
 {{ define "main" }}
 
-<div class="container">
-<h2 class="display-4 text-center">Main body goes here</h2>
+{{ if site.Data.homepage.about.enable }}
+  {{ with site.Data.homepage.about }}
+    <div id = "about" class="container text-center">
+      {{ if .video.enable }}
+        {{ with .video }}
+          <div class="ratio ratio-16x9">
+            <iframe src="{{ .videoURL | safeURL }}" allowfullscreen></iframe>
+          </div>
+          <br><br>
+        {{ end }}
+      {{ end }}
+      {{ if .button.enable }}
+        {{ with .button }}
+          <a class="btn btn-primary" href="{{ .link }}" role="button">{{ .label }}</a>
+          <br><br>
+        {{ end }}
+      {{ end }}
+      <h1 class="display-4">{{ .title | markdownify }}</h1>
+      <p>{{ .content | markdownify }}</p>
+    </div>
+  {{ end }}
+{{ end }}
+
+{{ if site.Data.homepage.story.enable }}
+  {{ with site.Data.homepage.story }}
+    <div id = "story" class="container text-center">
+      <h1 class="display-4">{{ .title | markdownify }}</h1>
+      <img src="{{ .image | absURL }}" class="client-img" alt="{{ .name | markdownify }}">
+      <br><br>
+      <p>{{ .content | markdownify }}</p>
+    </div>
+  {{ end }}
+{{ end }}
+
+{{ if site.Data.homepage.news.enable }}
+{{ with site.Data.homepage.news }}
+<div id = "news" class="container text-center">
+<h1 class="display-4">{{ .title | markdownify }}</h1>
 </div>
+{{ end }}
+{{ end }}
+
+{{ if site.Data.homepage.testimonials.enable }}
+{{ with site.Data.homepage.testimonials }}
+<div id = "testimonials" class="container text-center">
+  <h1 class="display-4">{{ .title | markdownify }}</h1>
+  {{ range .testimonialItem }}
+    <div class="media">
+      <img src="{{ .image | absURL }}" class="mr-3 mt-0 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
+      <div class="media-body">
+        <p class="quoted">{{ .content | markdownify }}</p>
+        <h6 class="font-weight-medium">{{ .name | markdownify }}</h6>
+        <small>{{ .designation | markdownify }}</small>
+      </div>
+  	</div>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}
+
+{{ if site.Data.homepage.cta.enable }}
+{{ with site.Data.homepage.cta }}
+<div id = "cta" class="container text-center">
+<h1 class="display-4">{{ .title | markdownify }}</h1>
+<p>{{ .content | markdownify }}</p>
+</div>
+{{ end }}
+{{ end }}
 
 {{ end }}

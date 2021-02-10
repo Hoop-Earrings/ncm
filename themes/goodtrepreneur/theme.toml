@@ -2,17 +2,17 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "Goodtrepreneur"
-license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+license = "Proprietary"
+licenselink = ""
 description = ""
-homepage = "http://example.com/"
+homepage = "http://goodtrepreneur.com/"
 tags = []
 features = []
 min_version = "0.41.0"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Goodtrepreneur"
+  homepage = "https://goodtrepreneur.com"
 
 # If porting an existing theme
 [original]
