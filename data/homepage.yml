@@ -37,7 +37,10 @@ news:
   button:
     label : "All Products"
     link : "products"
+  fbname: "goodtrepreneur"
 
+
+  
 ########################## testimonials ########################
 testimonials:
   enable : true
