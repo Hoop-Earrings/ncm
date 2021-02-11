@@ -1,8 +1,8 @@
 .jumbotron {
     padding: 4rem 2rem;
     margin-bottom: 2rem;
-    background-color: var(--bs-light);
-    border-radius: .3rem;
+    background-color: var(--banner-bg);
+    /*border-radius: .3rem;*/
 }
 
 .styled-align {
@@ -29,13 +29,13 @@
 .donate-button {
 	background-color: var(--donate-bg-colour);
 	border-radius: 6px;
-	border: none
+	border: none;
 }
 
 .donate-button:hover {
-	background-color: var(donate-hover-colour);
+	background-color: var(--donate-hover-colour);
 }
 
 .donate-button:active {
-	background-color: var(donate-active-colour);
+	background-color: var(--donate-active-colour);
 }
