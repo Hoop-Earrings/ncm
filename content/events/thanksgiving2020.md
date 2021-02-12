@@ -6,7 +6,7 @@ starttime: 12:00pm
 endtime: 3:00pm
 location: "123 Seasame Street"
 image: "images/easter2021event.png"
-video:
+video: "https://youtu.be/5douIo2gvwU"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This Thanksgiving, we handed out 400 meals to the local community. Served by the local community and military personnel, this event was a staggering feat that worked like a well-oiled machine! It's testament to the skill and dedication of our team to serve those in need. Thank you to all who volunteered on this big day!
