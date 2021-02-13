@@ -11,6 +11,9 @@
     {{ range site.Params.plugins.css }}
     <link rel="stylesheet" href="{{ .link | absURL }}">
     {{ end }}
+    {{ range site.Params.plugins.js }}
+    <script src="{{ .link | absURL }}"></script>
+    {{ end }}
 
     {{ "<!-- Main Stylesheet -->" | safeHTML }}
     {{ $styles := resources.Get "scss/main.scss" | toCSS | minify }}
