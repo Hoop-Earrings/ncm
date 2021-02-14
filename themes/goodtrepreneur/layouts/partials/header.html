@@ -1,62 +1,31 @@
-{{ "<!-- navigation -->" | safeHTML }}
-<header class="sticky-top navigation">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
   <div class="container">
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="{{ site.BaseURL }}">
-      	<img src = "{{ site.BaseURL }}images/logo.png" class="logo" title = "{{ site.Title }}" alt = "{{ site.Title }}"/>
-      </a>
-
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
-        <div class="dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Menu
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {{ range site.Menus.main }}
-                {{ if eq .Name "Donate"}}
-                  <li><hr class="dropdown-divider"></li>
-                {{ end }}
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ .URL | absURL }}"><span class="styled-text">{{ .Name }}</span></a>
-                </li>
-            {{ end }}
-          </ul>
-        </div>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ site.BaseURL }}">{{ with site.Params.Home }} {{ . }} {{ end }}</a>
-          </li>
-          {{ range site.Menus.main }}
-	          {{ if .HasChildren }}
-		          <li class="nav-item dropdown">
-		            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		              {{ .Name }}
-		            </a>
-		            <div class="dropdown-menu">
-		              {{ range .Children }}
-		              	<a class="dropdown-item" href="{{ .URL | absURL }}">{{ .Name }}</a>
-		              {{ end }}
-		            </div>
-		          </li>
-		        {{ else }}
-              {{ if ne .Name "Donate"}}
-  		          <li class="nav-item">
-  		            <a class="nav-link styled-align" href="{{ .URL | absURL }}"><span class="styled-underline styled-text">{{ .Name }}</span></a>
-  		          </li>
-              {{ else }}
-                <li class="nav-item">
-                  <button class="nav-link donate-button text-white styled-align" onclick="window.location.href='{{ .URL | absURL }}'">{{ .Name }}</a>
-                </li>
-              {{ end }}
-	          {{ end }}
+    <!-- Brand -->
+    <a class="navbar-brand" href="{{ site.BaseURL }}">
+    	<img src = "{{ site.BaseURL }}images/logo.png" class="logo" title = "{{ site.Title }}" alt = "{{ site.Title }}"/>
+    </a>
+    <!-- Toggler for collapse -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Nav items -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <!-- Home link -->
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.BaseURL }}">Home</a>
+        </li>
+        <!-- Iterate through pages except donate -->
+        {{ range site.Menus.main }}
+          {{ if ne .Name "Donate" }}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            </li>
           {{ end }}
-        </ul>
-      </div>
-    </nav>
+        {{ end }}
+      </ul>
+    </div>
+    <!-- Donate button -->
+    <a class="btn btn-primary ms-auto" href="{{ site.BaseURL | absURL }}/donate" role="button">Donate</a>
   </div>
-</header>
-{{ "<!-- /navigation -->" | safeHTML }}
+</nav>
