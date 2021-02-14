@@ -1,5 +1,5 @@
 // Override Bootstrap here
-$primary: #1a237e;
+$primary: #0000ff;
 
 // Bring in Bootstrap
 @import "../bootstrap/scss/bootstrap.scss";
@@ -25,4 +25,16 @@ $primary: #1a237e;
 }
 #cta {
   padding: 10vmin;
+}
+#events {
+  padding-top: 5vh;
+	padding-bottom: 5vh;
+}
+#volunteer {
+  padding-top: 5vh;
+	padding-bottom: 5vh;
+}
+#donate {
+  padding-top: 5vh;
+	padding-bottom: 5vh;
 }

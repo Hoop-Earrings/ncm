@@ -1,0 +1,25 @@
+############################ donate money ##########################
+donatemoney:
+  enable : true
+  heading: "Donate money"
+  subheading : "lorem ipsum"
+
+############################ alternatives ##########################
+alternatives:
+  enable : true
+  heading : "... or help in other ways"
+
+############################ donate goods ##########################
+donategoods:
+  enable : true
+  heading : "Donate goods"
+  subheading : ""
+  embedlink : "https://airtable.com/embed/shrMziN0hOsJCpy6Y"
+
+############################ donate time ##########################
+donatetime:
+  enable : true
+  heading : "Donate time"
+  subheading : "Head over to our volunteer page for more information on how to help us with your time"
+  label : "Volunteer"
+  link : "volunteer"

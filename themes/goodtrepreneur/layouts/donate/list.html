@@ -1,2 +1,40 @@
 {{ define "main" }}
+  <div id = "donate" class="container col-sm-10 col-md-8 col-lg-6 text-center">
+    <!-- Donate money -->
+    {{ if site.Data.donate.donatemoney.enable }}
+      {{ with site.Data.donate.donatemoney }}
+        <h2>{{ .heading }}</h2>
+        <br><br>
+      {{ end }}
+    {{ end }}
+    <!-- Alternatives -->
+    {{ if site.Data.donate.alternatives.enable }}
+      {{ with site.Data.donate.alternatives }}
+        <h2>{{ .heading }}</h2>
+        <br><br>
+      {{ end }}
+    {{ end }}
+    <!-- Donate goods -->
+    {{ if site.Data.donate.donategoods.enable }}
+      {{ with site.Data.donate.donategoods }}
+        <!-- Heading -->
+        <h4>{{ .heading }}</h4>
+        <br>
+        <!-- Embed form -->
+        <iframe class="airtable-embed airtable-dynamic-height" src="{{ .embedlink }}" frameborder="0" onmousewheel="" width="100%" height=auto style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <br><br>
+      {{ end }}
+    {{ end }}
+    <!-- Donate time -->
+    {{ if site.Data.donate.donatetime.enable }}
+      {{ with site.Data.donate.donatetime }}
+        <!-- Heading -->
+        <h4>{{ .heading }}</h4>
+        <h6>{{ .subheading }}</h6>
+        <br>
+        <!-- Button -->
+        <a class="btn btn-primary" href="{{ .link }}" role="button">{{ .label }}</a>
+      {{ end }}
+    {{ end }}
+  <div>
 {{ end }}

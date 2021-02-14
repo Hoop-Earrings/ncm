@@ -1,20 +1,24 @@
 ############################ intro ##########################
-volunteerintro:
+intro:
   enable : true
-  title: "Intro"
-  content : "lorem ipsum"
+  heading: "How you can volunteer"
+  videoURL: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  image: ""
+  content :
+    "Volunteering is easy as 1,2,3!
+    1. Watch the video above
+    2. Fill out the form below
+    3. What for us to get back to you"
 
-############################ forms ##########################
-forms:
+############################ form ##########################
+form:
   enable : true
-  heading : "Forms"
-  accordianItem:
-    # form item loop
-    - accordianheader : "Sign up to volunteer"
-      accordianitemid: "One"
-      embedlink : "https://airtable.com/embed/shrQsx5mcutuYqehV?backgroundColor=yellow"
+  heading : "Sign up to volunteer"
+  embedlink : "https://airtable.com/embed/shrQsx5mcutuYqehV?backgroundColor=yellow"
 
-    # form item loop
-    - accordianheader : "Schedule a physical donation dropoff"
-      accordianitemid: "Two"
-      embedlink : "https://airtable.com/embed/shrMziN0hOsJCpy6Y?backgroundColor=yellow"
+############################ button ##########################
+button:
+  enable : true
+  heading: "Volunteering not for you? No problem, how about a donation instead?"
+  label: "Donate"
+  link: "donate"
