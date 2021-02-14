@@ -1,21 +1,15 @@
 <head>
     <title>{{ .Title }}</title>
     <meta charset="utf-8">
-    <meta name="description"
-        content="Website meta description for google search results go here" />
-    <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#1A94D2" />
+    <meta name= "description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    <meta name= "viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {{ "<!-- Plugins -->" | safeHTML }}
-    {{ range site.Params.plugins.css }}
-    <link rel="stylesheet" href="{{ .link | absURL }}">
-    {{ end }}
-    {{ range site.Params.plugins.js }}
-    <script src="{{ .link | absURL }}"></script>
-    {{ end }}
+    <!-- CSS -->
+    {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $style := resources.Get "scss/style.scss" | toCSS $options | minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" >
 
-    {{ "<!-- Main Stylesheet -->" | safeHTML }}
-    {{ $styles := resources.Get "scss/main.scss" | toCSS | minify }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+    <!-- Bootstrap JS -->
+    {{ $bootstrapjs := resources.Get "bootstrap/js/bootstrap.min.js" }}
+    <script src="{{ $bootstrapjs.Permalink }}"></script>
 </head>

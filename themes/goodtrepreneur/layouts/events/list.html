@@ -4,11 +4,11 @@
 <!-- Iterate through pages -->
   {{ range .Pages}}
   <!-- Create card -->
-  <div class="card col-sm-10 col-md-8 col-lg-6 mx-auto mb-3">
+  <div class="card col-sm-10 col-md-8 col-lg-6 mx-auto">
     <!-- Displays video if there is one specified else displays the image -->
     {{ with .Param "video" }}
     <div class="ratio ratio-16x9">
-      <iframe src="{{.}}" allowfullscreen></iframe>
+      <iframe src="{{ . | safeURL}}" allowfullscreen></iframe>
     </div>
     {{ else }}
       <img class = "card-img-top" src="{{.Params.Image | absURL }}" alt="{{ .Title }}">

@@ -2,18 +2,8 @@ BaseURL = "https://www.mywebsite.com/"
 languageCode = "en-us"
 title = "New Challenge Ministries"
 theme = "goodtrepreneur"
+description = "This is meta description"
 relativeURLS = true
-
-############################# Plugins ##############################
-[params.plugins]
-
-  # CSS Plugins
-  [[params.plugins.css]]
-  link = "plugins/bootstrap/bootstrap.min.css"
-
-  # JS Plugins
-  [[params.plugins.js]]
-  link = "plugins/bootstrap/bootstrap.min.js"
 
 ############################# Navigation ##############################
 [menu]
