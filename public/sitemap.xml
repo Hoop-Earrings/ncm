@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.mywebsite.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/events/toydrive2020/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/corporate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/donate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/events/easter2021/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/events/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/events/thanksgiving2020/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.mywebsite.com/volunteer/</loc>
+  </url>
+  
+</urlset>
