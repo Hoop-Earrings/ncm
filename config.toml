@@ -1,8 +1,8 @@
-BaseURL = "https://www.mywebsite.com/"
+BaseURL = "https://testing.goodtrepreneur.com/"
 languageCode = "en-us"
 title = "New Challenge Ministries"
 theme = "goodtrepreneur"
-description = "This is meta description"
+description = "New Challenge Ministries"
 relativeURLS = true
 
 ############################# Navigation ##############################

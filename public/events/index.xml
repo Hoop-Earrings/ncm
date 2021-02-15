@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Events on New Challenge Ministries</title>
-    <link>https://www.mywebsite.com/events/</link>
+    <link>https://testing.goodtrepreneur.com/events/</link>
     <description>Recent content in Events on New Challenge Ministries</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.mywebsite.com/events/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://testing.goodtrepreneur.com/events/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Christmas Toy Drive 2020</title>
-      <link>https://www.mywebsite.com/events/toydrive2020/</link>
+      <link>https://testing.goodtrepreneur.com/events/toydrive2020/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.mywebsite.com/events/toydrive2020/</guid>
+      <guid>https://testing.goodtrepreneur.com/events/toydrive2020/</guid>
       <description>This Christmas, we&amp;rsquo;ve handed out 400 toys to local kids in need. Each child received 3 toys during this event, which was conducted as a drive-thru event in light of Covid-19. As such we sadly were not able to have face painting or Santa present this year but nonetheless we&amp;rsquo;re proud to have helped so many kids have a brighter Christmas.</description>
     </item>
     
     <item>
       <title>Easter 2021</title>
-      <link>https://www.mywebsite.com/events/easter2021/</link>
+      <link>https://testing.goodtrepreneur.com/events/easter2021/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.mywebsite.com/events/easter2021/</guid>
+      <guid>https://testing.goodtrepreneur.com/events/easter2021/</guid>
       <description>This Easter we&amp;rsquo;re going to eat eggs.</description>
     </item>
     
     <item>
       <title>Thanksgiving Handout 2020</title>
-      <link>https://www.mywebsite.com/events/thanksgiving2020/</link>
+      <link>https://testing.goodtrepreneur.com/events/thanksgiving2020/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.mywebsite.com/events/thanksgiving2020/</guid>
+      <guid>https://testing.goodtrepreneur.com/events/thanksgiving2020/</guid>
       <description>This Thanksgiving, we handed out 400 meals to the local community. Served by the local community and military personnel, this event was a staggering feat that worked like a well-oiled machine! It&amp;rsquo;s testament to the skill and dedication of our team to serve those in need. Thank you to all who volunteered on this big day!</description>
     </item>
     
