@@ -1,5 +1,26 @@
-<footer class="footer fixed-bottom bg-dark">
+<footer class="footer static-bottom bg-dark footer-trim">
     <div class="row footer-text">
-      <div class="col-12 col-md text-center text-md-left nav-link text-white">© {{ site.Title }} - {{ now.Year }} All rights reserved.</div>
-    </div>
+		<div class="col-12 col-md text-center text-md-left nav-link text-white">
+			<h4 class="footer-header bold-header">Contact</h4>
+			<div class="content-grid">
+				<div class="details-section">
+					<h2 class="bold-header">{{ site.Data.footer.address.first }},</h2>
+					<h2 class="bold-header">{{ site.Data.footer.address.second }}</h2>
+					<br />
+					<h4>{{ site.Data.footer.phone.number }}</h4>
+					<h4>{{ site.Data.footer.email.address }}</h4>
+				</div>
+				<div class="map-section">
+					<iframe src="{{ site.Data.footer.map.embedsrc }}" class="footer-map" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+				<div class="hours-section"> 
+					<p>{{ site.Data.footer.hours.text }}</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="credit-banner">
+		Created by <a href="https://www.goodtrepreneur.com/">Goodtrepreneur</a>
+	</div>
 </footer>

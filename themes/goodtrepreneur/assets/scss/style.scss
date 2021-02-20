@@ -38,3 +38,51 @@ $primary: #0000ff;
   padding-top: 5vh;
 	padding-bottom: 5vh;
 }
+.footer-header {
+  padding-top: 25px;
+  padding-bottom: 25px; 
+}
+.bold-header {
+  font-weight: bold;
+}
+.footer-trim {
+  overflow-x: hidden;
+}
+.content-grid {
+  display: grid;
+  grid-template-columns: [line1] 25% [line2] 50% [line3] 25%;
+  grid-template-rows: 1;
+}
+.map-section {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.details-section {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.hours-section {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  word-break: break-word;
+  white-space: pre-line;
+  text-align: right;
+  padding-right: 20%;
+}
+.footer-map {
+  width: 300px;
+  height: 200px;
+  border: 0;
+}
+.credit-banner {
+  color: black;
+  background-color: #f8f9fa;
+  text-align: center;
+  font-size: 14px;
+}
