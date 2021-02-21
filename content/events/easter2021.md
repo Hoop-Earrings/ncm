@@ -1,7 +1,7 @@
 ---
 title: "Easter 2021"
 draft: false
-eventdate: 2021-04-03
+eventdate: "2021-04-03"
 starttime: 12:00pm
 endtime: 3:00pm
 location: "123 Seasame Street"

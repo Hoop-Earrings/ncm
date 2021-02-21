@@ -1,7 +1,7 @@
 ---
 title: "Christmas Toy Drive 2020"
 draft: false
-eventdate: 2021-02-14
+eventdate: "2021-02-14"
 starttime:
 endtime:
 location: "456 Seasame Street"

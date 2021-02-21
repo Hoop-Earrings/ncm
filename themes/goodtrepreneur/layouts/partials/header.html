@@ -5,7 +5,7 @@
     	<img src = "{{ site.BaseURL }}images/logo.png" class="logo" title = "{{ site.Title }}" alt = "{{ site.Title }}"/>
     </a>
     <!-- Toggler for collapse -->
-    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Nav items -->
@@ -23,9 +23,9 @@
             </li>
           {{ end }}
         {{ end }}
+        <!-- Donate button -->
+        <a class="btn btn-primary" href="{{ site.BaseURL | absURL }}/donate" role="button">Donate</a>
       </ul>
     </div>
-    <!-- Donate button -->
-    <a class="btn btn-primary ms-auto" href="{{ site.BaseURL | absURL }}/donate" role="button">Donate</a>
   </div>
 </nav>
