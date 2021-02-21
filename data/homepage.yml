@@ -14,7 +14,14 @@ about:
     label : "Donate today!"
     link : "donate"
   # text
-  content : "Through our vision and action, we demonstrate our passion for assisting those in need. We have no zip code restrictions and do not discriminate against anyone in need. All are welcome! In November of 2006, as part of our mission to serve the community, we began to fight hunger by gathering and distributing food, engaging in partnerships that advance self-sufficiency and by providing leadership on issues related to hunger. Since then we've helped over 5,000,000 people directly and indirectly by supporting other non-profits and community groups. Thank you for taking an interest in what we do here at New Challenge Ministries, if you can support us with a donation we would be incredibly grateful, as you can imagine we rely on your generosity to make any of this possible. Thank you! - Pastor John Hernandez, President and Senior Pastor, New Challenge Ministries"
+  content : |
+    Through our vision and action, we demonstrate our passion for assisting those in need. We have no zip code restrictions and do not discriminate against anyone in need. All are welcome! In November of 2006, as part of our mission to serve the community, we began to fight hunger by gathering and distributing food, engaging in partnerships that advance self-sufficiency and by providing leadership on issues related to hunger.
+
+    Since then we've helped over 5,000,000 people directly and indirectly by supporting other non-profits and community groups. Thank you for taking an interest in what we do here at New Challenge Ministries, if you can support us with a donation we would be incredibly grateful, as you can imagine we rely on your generosity to make any of this possible.
+
+    Thank you!
+
+    Pastor John Hernandez, President and Senior Pastor, New Challenge Ministries
 
 ########################## story ##############################
 story:
@@ -26,11 +33,16 @@ story:
     enable : true
     label : "Volunteer with us!"
     link : "volunteer"
-  content : "In 1979 Pastor John moved to Southern California from Montana and quickly set about founding New Challenge Ministries in 1981 with Reverend Mark Flick and John Snider. Since it’s inception, New Challenge Ministries has sought to help those struggling with life-controlling substance problems such as drugs and alcohol. <br>
-In 1994 Pastor John met his wife, Laura. She quickly became involved in New Challenge Ministries, bringing years of experience in customer service and a heart for helping people, the charity quickly took on the form we know of it today.  <br>
-In 2006, Pastor John and his wife Laura began distributing food to combat the ever-growing problem of food inequality. Their goal is to ensure that everyone who calls, writes, or comes to New Challenge experiences respect, dignity and humanity.<br>
-In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people for the first time within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far. <br>
-With your help, New Challenge Ministries can keep helping millions of people in need every year."
+  content : |
+    In 1979 Pastor John moved to Southern California from Montana and quickly set about founding New Challenge Ministries in 1981 with Reverend Mark Flick and John Snider. Since it’s inception, New Challenge Ministries has sought to help those struggling with life-controlling substance problems such as drugs and alcohol.
+
+    In 1994 Pastor John met his wife, Laura. She quickly became involved in New Challenge Ministries, bringing years of experience in customer service and a heart for helping people, the charity quickly took on the form we know of it today.
+
+    In 2006, Pastor John and his wife Laura began distributing food to combat the ever-growing problem of food inequality. Their goal is to ensure that everyone who calls, writes, or comes to New Challenge experiences respect, dignity and humanity.
+
+    In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people for the first time within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far.
+
+    With your help, New Challenge Ministries can keep helping millions of people in need every year.
 
 ###################### news ########################
 news:

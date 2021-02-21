@@ -1,4 +1,5 @@
 {{ define "main" }}
+
 <!-- Intro video -->
 {{ if site.Data.homepage.intro.enable }}
   {{ with site.Data.homepage.intro }}
@@ -12,7 +13,7 @@
 <!-- About section -->
 {{ if site.Data.homepage.about.enable }}
   {{ with site.Data.homepage.about }}
-    <div id = "about" class="container-fluid text-center">
+    <div id = "about" class="container text-center">
       <h1 class="display-4">{{ .title | markdownify }}</h1>
       <p>{{ .content | markdownify }}</p>
       {{ if .button.enable }}
@@ -28,54 +29,58 @@
 {{ if site.Data.homepage.story.enable }}
   {{ with site.Data.homepage.story }}
     <div id = "story" class="container-fluid text-center">
-      <h1 class="display-4">{{ .title | markdownify }}</h1>
-      <img src="{{ .image | absURL }}" class="client-img" alt="{{ .name | markdownify }}">
-      <br><br>
-      <p>{{ .content | markdownify }}</p>
-      {{ if .button.enable }}
-        {{ with .button }}
-          <br>
-          <a class="btn btn-primary btn-lg" href="{{ .link }}" role="button">{{ .label }}</a>
+      <div class = "container">
+        <h1 class="display-4">{{ .title | markdownify }}</h1>
+        <img src="{{ .image | absURL }}" class="client-img" alt="{{ .name | markdownify }}">
+        <br><br>
+        <p>{{ .content | markdownify }}</p>
+        {{ if .button.enable }}
+          {{ with .button }}
+            <br>
+            <a class="btn btn-primary btn-lg" href="{{ .link }}" role="button">{{ .label }}</a>
+          {{ end }}
         {{ end }}
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
+<!-- Testimonials -->
+{{ if site.Data.homepage.testimonials.enable }}
+  {{ with site.Data.homepage.testimonials }}
+    <div id = "testimonials" class="container text-center">
+      <h1 class="display-4">{{ .title | markdownify }}</h1>
+      {{ range .testimonialItem }}
+        <div class="media">
+          <img src="{{ .image | absURL }}" class="mr-3 mt-0 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
+          <div class="media-body">
+            <p class="quoted">{{ .content | markdownify }}</p>
+            <h6 class="font-weight-medium">{{ .name | markdownify }}</h6>
+            <small>{{ .designation | markdownify }}</small>
+          </div>
+      	</div>
       {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
+<!-- Call to action -->
+{{ if site.Data.homepage.cta.enable }}
+  {{ with site.Data.homepage.cta }}
+    <div id = "cta" class="container-fluid text-center">
+      <div class = "container">
+        <h1 class="display-4">{{ .title | markdownify }}</h1>
+        <p>{{ .content | markdownify }}</p>
+      </div>
     </div>
   {{ end }}
 {{ end }}
 <!-- Facebook newsfeed -->
 {{ if site.Data.homepage.news.enable }}
-{{ with site.Data.homepage.news }}
-<div id = "news" class="container-fluid text-center">
-<h1 class="display-4">{{ .title | markdownify }}</h1>
-<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F{{ .fbname | markdownify }}&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-</div>
-{{ end }}
-{{ end }}
-<!-- Testimonials -->
-{{ if site.Data.homepage.testimonials.enable }}
-{{ with site.Data.homepage.testimonials }}
-<div id = "testimonials" class="container-fluid text-center">
-  <h1 class="display-4">{{ .title | markdownify }}</h1>
-  {{ range .testimonialItem }}
-    <div class="media">
-      <img src="{{ .image | absURL }}" class="mr-3 mt-0 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
-      <div class="media-body">
-        <p class="quoted">{{ .content | markdownify }}</p>
-        <h6 class="font-weight-medium">{{ .name | markdownify }}</h6>
-        <small>{{ .designation | markdownify }}</small>
-      </div>
-  	</div>
+  {{ with site.Data.homepage.news }}
+    <div id = "news" class="container-fluid text-center">
+      <h1 class="display-4">{{ .title | markdownify }}</h1>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F{{ .fbname | markdownify }}&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
   {{ end }}
-</div>
-{{ end }}
-{{ end }}
-<!-- Call to action -->
-{{ if site.Data.homepage.cta.enable }}
-{{ with site.Data.homepage.cta }}
-<div id = "cta" class="container-fluid text-center">
-<h1 class="display-4">{{ .title | markdownify }}</h1>
-<p>{{ .content | markdownify }}</p>
-</div>
-{{ end }}
 {{ end }}
 
 {{ end }}
