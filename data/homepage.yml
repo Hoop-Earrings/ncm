@@ -89,6 +89,17 @@ testimonials:
 cta:
   enable : true
   title : "How you can help"
-  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren,"
+  button:
+    enable : true
+    label : "Donate today!"
+    link : "donate"
+  content : |
+      Right now, here's where we could really use your help:
+
+      Cash donations via credit/debit card, check, Zelle, Paypal
+
+      Volunteer support, check out our volunteer tab for more info.
+
+      Food donations
+
+      Support from our local businesses for both food and funds!

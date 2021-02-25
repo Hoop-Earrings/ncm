@@ -70,6 +70,12 @@
         <h1 class="display-4">{{ .title | markdownify }}</h1>
         <p>{{ .content | markdownify }}</p>
       </div>
+      {{ if .button.enable }}
+        {{ with .button }}
+          <br>
+          <a class="btn btn-primary btn-lg" href="{{ .link }}" role="button">{{ .label }}</a>
+        {{ end }}
+      {{ end }}
     </div>
   {{ end }}
 {{ end }}
