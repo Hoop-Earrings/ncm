@@ -14,7 +14,7 @@ email:
 ############################ map ##########################
 map:
   embedsrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.1717526207754!2d-118.32886378436713!3d33.85946428065884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b53eee32c4c7%3A0x4aae62b93487718d!2s18801%20Crenshaw%20Pl%2C%20Torrance%2C%20CA%2090504%2C%20USA!5e0!3m2!1sen!2suk!4v1613819647609!5m2!1sen!2suk"
-
+  link: "https://www.google.com/maps/place/18801+Crenshaw+Pl,+Torrance,+CA+90504,+USA/@33.859464,-118.326675,13z/data=!4m5!3m4!1s0x80c2b53eee32c4c7:0x4aae62b93487718d!8m2!3d33.8594643!4d-118.3266751?hl=en"
 ############################ map ##########################
 hours:
   text:

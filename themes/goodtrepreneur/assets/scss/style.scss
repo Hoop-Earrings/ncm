@@ -5,6 +5,21 @@ $primary: #0000ff;
 @import "../bootstrap/scss/bootstrap.scss";
 
 // Custom styles
+@media screen and (max-width: 800px) {
+  .footer-section {
+    display: none !important;   
+  }
+  .low-res-address {
+    display: block !important;
+  }
+  .normal-address {
+    display: none !important;
+  }
+  .hours-section {
+    text-align: center !important;
+  }
+}
+
 .logo {
 	height: 75px;
 	width: 75px;
@@ -61,37 +76,25 @@ $primary: #0000ff;
 .footer-trim {
   overflow-x: hidden;
 }
-.content-grid {
-  display: grid;
-  grid-template-columns: [line1] 25% [line2] 50% [line3] 25%;
-  grid-template-rows: 1;
-}
-.map-section {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-.details-section {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
 .hours-section {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
   word-break: break-word;
   white-space: pre-line;
   text-align: right;
-  padding-right: 20%;
 }
 .footer-map {
   width: 300px;
   height: 200px;
   border: 0;
+  float: left;
+}
+.normal-address {
+  display: block;
+}
+.low-res-address {
+  display: none;
+}
+.low-res-address a{
+  color: grey;
 }
 .credit-banner {
   color: black;

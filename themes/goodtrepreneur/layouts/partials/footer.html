@@ -2,22 +2,33 @@
     <div class="row footer-text">
 		<div class="col-12 col-md text-center text-md-left nav-link text-white">
 			<h4 class="footer-header bold-header">Contact</h4>
-			<div class="content-grid">
-				<div class="details-section">
-					<h2 class="bold-header">{{ site.Data.footer.address.first }},</h2>
-					<h2 class="bold-header">{{ site.Data.footer.address.second }}</h2>
-					<br />
-					<h4>{{ site.Data.footer.phone.number }}</h4>
-					<h4>{{ site.Data.footer.email.address }}</h4>
-				</div>
-				<div class="map-section">
-					<iframe src="{{ site.Data.footer.map.embedsrc }}" class="footer-map" allowfullscreen="" loading="lazy"></iframe>
-				</div>
-				<div class="hours-section"> 
-					<p>{{ site.Data.footer.hours.text }}</p>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm footer-section">
+						<iframe src="{{ site.Data.footer.map.embedsrc }}" class="footer-map" allowfullscreen="" loading="lazy"></iframe>
+					</div>
+					<div class="col-sm">
+						<div class="normal-address">
+							<h2 class="bold-header">{{ site.Data.footer.address.first }},</h2>
+							<h2 class="bold-header">{{ site.Data.footer.address.second }}</h2>
+						</div>
+						<div class="low-res-address">
+							<a href="{{ site.Data.footer.map.link }}">
+								<h2 class="bold-header">{{ site.Data.footer.address.first }},</h2>
+								<h2 class="bold-header">{{ site.Data.footer.address.second }}</h2>
+							</a>
+						</div>
+						<br />
+						<div class="details">
+							<h4>{{ site.Data.footer.phone.number }}</h4>
+							<h4>{{ site.Data.footer.email.address }}</h4>
+						</div>
+					</div>
+					<div class="col-sm hours-section"> 
+						<p>{{ site.Data.footer.hours.text }}</p>
+					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 	<div class="credit-banner">
