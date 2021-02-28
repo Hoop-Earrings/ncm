@@ -5,20 +5,20 @@ $primary: #0000ff;
 @import "../bootstrap/scss/bootstrap.scss";
 
 // Custom styles
-@media screen and (max-width: 800px) {
-  .footer-section {
-    display: none !important;   
-  }
-  .low-res-address {
-    display: block !important;
-  }
-  .normal-address {
-    display: none !important;
-  }
-  .hours-section {
-    text-align: center !important;
-  }
-}
+// @media screen and (max-width: 800px) {
+//   .footer-section {
+//     display: none !important;
+//   }
+//   .low-res-address {
+//     display: block !important;
+//   }
+//   .normal-address {
+//     display: none !important;
+//   }
+//   .hours-section {
+//     text-align: center !important;
+//   }
+// }
 
 .logo {
 	height: 75px;
@@ -66,39 +66,43 @@ $primary: #0000ff;
   padding-top: 5vh;
 	padding-bottom: 5vh;
 }
-.footer-header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+#footer-top {
+  padding-top: 1em;
+	padding-bottom: 1em;
 }
-.bold-header {
-  font-weight: bold;
-}
-.footer-trim {
-  overflow-x: hidden;
-}
-.hours-section {
-  word-break: break-word;
-  white-space: pre-line;
-  text-align: right;
-}
-.footer-map {
-  width: 300px;
-  height: 200px;
-  border: 0;
-  float: left;
-}
-.normal-address {
-  display: block;
-}
-.low-res-address {
-  display: none;
-}
-.low-res-address a{
-  color: grey;
-}
-.credit-banner {
-  color: black;
-  background-color: #f8f9fa;
-  text-align: center;
-  font-size: 14px;
-}
+// .footer-header {
+//   padding-top: 25px;
+//   padding-bottom: 25px;
+// }
+// .bold-header {
+//   font-weight: bold;
+// }
+// .footer-trim {
+//   overflow-x: hidden;
+// }
+// .hours-section {
+//   word-break: break-word;
+//   white-space: pre-line;
+//   text-align: right;
+// }
+// .footer-map {
+//   width: 300px;
+//   height: 200px;
+//   border: 0;
+//   float: left;
+// }
+// .normal-address {
+//   display: block;
+// }
+// .low-res-address {
+//   display: none;
+// }
+// .low-res-address a{
+//   color: grey;
+// }
+// .credit-banner {
+//   color: black;
+//   background-color: #f8f9fa;
+//   text-align: center;
+//   font-size: 14px;
+// }
