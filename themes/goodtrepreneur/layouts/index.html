@@ -49,16 +49,46 @@
   {{ with site.Data.homepage.testimonials }}
     <div id = "testimonials" class="container text-center">
       <h1 class="display-4">{{ .title | markdownify }}</h1>
-      {{ range .testimonialItem }}
-        <div class="media">
-          <img src="{{ .image | absURL }}" class="mr-3 mt-0 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
-          <div class="media-body">
-            <p class="quoted">{{ .content | markdownify }}</p>
-            <h6 class="font-weight-medium">{{ .name | markdownify }}</h6>
-            <small>{{ .designation | markdownify }}</small>
+      <div id="carouseltestimonials" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class = "col-8 mx-auto">
+            {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "eq" 1) }}
+            <div class="card text-center">
+              <img src="{{ .image | absURL }}" class="class-image-top mx-auto mt-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
+              <div class="card-body">
+                <h6 class="font-weight-medium">{{ .name | markdownify }}</h6>
+                <small>{{ .designation | markdownify }}</small>
+                <p class="quoted">{{ .content | markdownify }}</p>
+              </div>
+            </div>
+            {{ end }}
           </div>
-      	</div>
-      {{ end }}
+          </div>
+          {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "ne" 1) }}
+            <div class="carousel-item">
+              <div class = "col-8 mx-auto">
+              <div class="card text-center">
+                <img src="{{ .image | absURL }}" class="class-image-top mx-auto mt-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
+                <div class="card-body">
+                  <h6 class="font-weight-medium">{{ .name | markdownify }}</h6>
+                  <small>{{ .designation | markdownify }}</small>
+                  <p class="quoted">{{ .content | markdownify }}</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          {{ end }}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouseltestimonials"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouseltestimonials"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
   {{ end }}
 {{ end }}

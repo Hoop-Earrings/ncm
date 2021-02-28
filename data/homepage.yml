@@ -64,24 +64,28 @@ testimonials:
     # testimonial item loop
     - name : "Jennifer S. Elkin"
       image : "images/jenniferselkin.png" # size 100px*100px
+      weight : 1
       designation : "National Charity League, Inc Philanthropy Liaison "
       content : "Much of the NCM's success in supporting tens of thousands of needy and hungry residents is owing to the tireless commitment, energy, drive, determination and effort of its leader, Pastor John Hernandez. John inspires all of us to do all we can and much more by instilling in each of us the notion that feeding the hungry is perhaps the most noble direct gift we can provide. He leads by example and is an extraordinary role model. Moreover, John is responsible and is an effective leader and manager - necessary qualities required in order to organize and delegate to an ever - growing number of volunteers"
 
     # testimonial item loop
     - name : "Neslie Akkol"
       image : "images/neslieakkol.png" # size 100px*100px
+      weight : 2
       designation : "Former Community Liaison at Counseling4Kids"
       content : "When Counseling4Kids ran out of new toys for foster kids during Christmas, John and Laura donated hundreds of new and high-quality toys so that each child was given a toy during the holidays. Most recently, they donated more than 200 new backpacks children who live in domestic violence shelters – through another nonprofit organization named Present Now."
 
     # testimonial item loop
     - name : "Emmanuel G. Marquez"
       image : "images/placeholder1.png" # size 100px*100px - Image is rando from google, not Emmanuel
+      weight : 3
       designation : "First Staff Sergeant, US Army"
       content : "Pastor John and New Challenge Ministries is a perfect example of what the American public is capable of. Supporting one another through multiple different programs and numerous volunteers is a tremendous task in itself, and one in which Pastor John has displayed exceptional leadership and managerial skills to oversee NCM's outreaches. Continued funding for New Challenges Ministries is a must for the military community in Southern California."
 
     # testimonial item loop
     - name : "Bruno Perron"
       image : "images/brunoperron.png" # size 100px*100px
+      weight : 4
       designation : "CEO, Still Got It Fitness"
       content : "New Challenge Ministries helps so many families in need. As a volunteer of the biggest food bank in the South Bay I have seen Pastor John feeding so many hungry families as well as giving them clothes, backpacks and school supplies for kids and just being a super giver to the entire community. "
 
