@@ -1,12 +1,18 @@
 {{ define "main" }}
-
-<!-- Intro video -->
-{{ if site.Data.homepage.intro.enable }}
-  {{ with site.Data.homepage.intro }}
-    <div id = "intro" class = "container">
-      <div class="ratio ratio-16x9">
-        <iframe src="{{ .videoURL | safeURL }}" allowfullscreen></iframe>
+<!-- Banner -->
+{{ if site.Data.homepage.banner.enable }}
+  {{ with site.Data.homepage.banner }}
+    <div class="banner-full">
+      <div class = "container text-center">
+        <h1 class="display-4"> {{ .content | markdownify }} </h1>
+        {{ if .button.enable }}
+          {{ with .button }}
+            <br>
+            <a class="btn btn-primary btn-lg" href="{{ .link }}" role="button">{{ .label }}</a>
+          {{ end }}
+        {{ end }}
       </div>
+      <img src="{{ .image | absURL }}">
     </div>
   {{ end }}
 {{ end }}
@@ -16,12 +22,16 @@
     <div id = "about" class="container text-center">
       <h1 class="display-4">{{ .title | markdownify }}</h1>
       <p>{{ .content | markdownify }}</p>
-      {{ if .button.enable }}
-        {{ with .button }}
-          <br>
-          <a class="btn btn-primary btn-lg" href="{{ .link }}" role="button">{{ .label }}</a>
-        {{ end }}
-      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
+<!-- Intro video -->
+{{ if site.Data.homepage.intro.enable }}
+  {{ with site.Data.homepage.intro }}
+    <div id = "intro" class = "container">
+      <div class="ratio ratio-16x9">
+        <iframe src="{{ .videoURL | safeURL }}" allowfullscreen></iframe>
+      </div>
     </div>
   {{ end }}
 {{ end }}
@@ -51,32 +61,28 @@
       <h1 class="display-4">{{ .title | markdownify }}</h1>
       <div id="carouseltestimonials" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
+          {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "eq" 1) }}
           <div class="carousel-item active">
-            <div class = "col-8 mx-auto">
-            {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "eq" 1) }}
-            <div class="card text-center">
-              <img src="{{ .image | absURL }}" class="class-image-top mx-auto mt-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
+            <div class="card text-center col-sm-8 mx-auto">
+              <img src="{{ .image | absURL }}" class="class-image-top mx-auto my-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
               <div class="card-body">
-                <h6 class="font-weight-medium">{{ .name | markdownify }}</h6>
-                <small>{{ .designation | markdownify }}</small>
-                <p class="quoted">{{ .content | markdownify }}</p>
+                <h6 class="card-title">{{ .name | markdownify }}</h6>
+                <h6 class="card-subtitle mb-3 text-muted">{{ .designation | markdownify }}</h6>
+                <p class="card-text">{{ .content | markdownify }}</p>
               </div>
             </div>
-            {{ end }}
           </div>
-          </div>
+          {{ end }}
           {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "ne" 1) }}
             <div class="carousel-item">
-              <div class = "col-8 mx-auto">
-              <div class="card text-center">
-                <img src="{{ .image | absURL }}" class="class-image-top mx-auto mt-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
+              <div class="card text-center col-sm-8 mx-auto">
+                <img src="{{ .image | absURL }}" class="class-image-top mx-auto my-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
                 <div class="card-body">
-                  <h6 class="font-weight-medium">{{ .name | markdownify }}</h6>
-                  <small>{{ .designation | markdownify }}</small>
-                  <p class="quoted">{{ .content | markdownify }}</p>
+                  <h6 class="card-title">{{ .name | markdownify }}</h6>
+                  <h6 class="card-subtitle mb-3 text-muted">{{ .designation | markdownify }}</h6>
+                  <p class="card-text">{{ .content | markdownify }}</p>
                 </div>
               </div>
-            </div>
             </div>
           {{ end }}
         </div>
@@ -88,8 +94,8 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
     </div>
+  </div>
   {{ end }}
 {{ end }}
 <!-- Call to action -->
@@ -98,14 +104,39 @@
     <div id = "cta" class="container-fluid text-center">
       <div class = "container">
         <h1 class="display-4">{{ .title | markdownify }}</h1>
-        <p>{{ .content | markdownify }}</p>
+        <div class = "row">
+          <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="/images/donate.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Donate</h5>
+                <p class="card-text">We are currently looking for cash and food donations.</p>
+              </div>
+              <div class="card-footer"><a href="/donate" class="btn btn-primary">Donate</a></div>
+            </div>
+            </div>
+          <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="/images/volunteer.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Volunteer</h5>
+                <p class="card-text">Check out our volunteer tab for more info.</p>
+              </div>
+              <div class="card-footer"><a href="/volunteer" class="btn btn-primary">Volunteer</a></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="/images/sponsor.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Sponsor</h5>
+                <p class="card-text">Support from our local businesses for both food and funds.</p>
+              </div>
+              <div class="card-footer"><a href="/sponsor" class="btn btn-primary">Sponsor</a></div>
+            </div>
+          </div>
+        </div>
       </div>
-      {{ if .button.enable }}
-        {{ with .button }}
-          <br>
-          <a class="btn btn-primary btn-lg" href="{{ .link }}" role="button">{{ .label }}</a>
-        {{ end }}
-      {{ end }}
     </div>
   {{ end }}
 {{ end }}

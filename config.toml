@@ -20,9 +20,9 @@ relativeURLS = true
     weight = 2
 
   [[menu.main]]
-    identifier = "corporate"
-    name = "Corporate"
-    url = "/corporate/"
+    identifier = "sponsor"
+    name = "Sponsor"
+    url = "/sponsor/"
     weight = 3
 
   [[menu.main]]

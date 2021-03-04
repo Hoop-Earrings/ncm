@@ -1,3 +1,13 @@
+############################ banner ##########################
+banner:
+  enable : true
+  image : "images/stock14.jpg"
+  content: "South bay's largest distribution center, serving over 1,000,000 people in 2020!"
+  button:
+    enable : true
+    label : "Donate today!"
+    link : "donate"
+
 ############################ intro ##########################
 intro:
   enable : true
@@ -8,12 +18,6 @@ intro:
 about:
   enable : true
   title : "About"
-  # button
-  button:
-    enable : true
-    label : "Donate today!"
-    link : "donate"
-  # text
   content : |
     Through our vision and action, we demonstrate our passion for assisting those in need. We have no zip code restrictions and do not discriminate against anyone in need. All are welcome! In November of 2006, as part of our mission to serve the community, we began to fight hunger by gathering and distributing food, engaging in partnerships that advance self-sufficiency and by providing leadership on issues related to hunger.
 

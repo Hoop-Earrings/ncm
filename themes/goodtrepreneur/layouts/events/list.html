@@ -1,5 +1,9 @@
 {{ define "main" }}
-
+<div class="banner-half">
+  <div class = "container text-center">
+    <h2 class="display-4"> {{.Content}} </h2>
+  </div>
+</div>
 <div id = "events" class = "container text-center">
 <!-- Iterate through pages -->
   {{ range (.Pages.ByParam "eventdate").Reverse }}
