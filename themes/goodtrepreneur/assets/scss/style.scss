@@ -24,6 +24,10 @@ $primary: #0000ff;
 	height: 50px;
 	width: 50px;
 }
+.navbar-text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .mask {
   background-color: rgba(251, 251, 251, 0.7);
   width:100%;
@@ -64,9 +68,14 @@ $primary: #0000ff;
   padding-top: 5vmin;
 	padding-bottom: 5vmin;
 }
-#volunteer {
+#volunteer-form {
   padding-top: 5vh;
 	padding-bottom: 5vh;
+}
+#volunteer-alt {
+  padding-top: 5vh;
+	padding-bottom: 5vh;
+  background-color: $light;
 }
 #donate {
   padding-top: 5vh;

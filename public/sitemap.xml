@@ -11,10 +11,6 @@
   </url>
   
   <url>
-    <loc>https://testing.goodtrepreneur.com/corporate/</loc>
-  </url>
-  
-  <url>
     <loc>https://testing.goodtrepreneur.com/donate/</loc>
   </url>
   
@@ -28,6 +24,10 @@
   
   <url>
     <loc>https://testing.goodtrepreneur.com/</loc>
+  </url>
+  
+  <url>
+    <loc>https://testing.goodtrepreneur.com/sponsor/</loc>
   </url>
   
   <url>

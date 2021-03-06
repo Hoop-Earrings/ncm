@@ -4,6 +4,7 @@
     <a class="navbar-brand" href="{{ site.BaseURL }}">
     	<img src = "{{ site.BaseURL }}images/logo.png" class="logo" title = "{{ site.Title }}" alt = "{{ site.Title }}"/>
     </a>
+    <span class = "navbar-text"> <strong>{{ .Title }}</strong></span>
     <!-- Toggler for collapse -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,20 +12,17 @@
     <!-- Nav items -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
-        <!-- Home link -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.BaseURL }}">Home</a>
-        </li>
         <!-- Iterate through pages except donate -->
+        {{ $currentPage := . }}
         {{ range site.Menus.main }}
-          {{ if ne .Name "Donate" }}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
-            </li>
+          {{ if eq .Name "Donate" }}
+            <a class="btn btn-primary" href="{{ .URL | absURL }}" role="button">Donate</a>
+          {{else }}
+          <li class="nav-item">
+            <a class="nav-link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL | absURL }}">{{ .Name }}</a>
+          </li>
           {{ end }}
         {{ end }}
-        <!-- Donate button -->
-        <a class="btn btn-primary" href="{{ site.BaseURL | absURL }}/donate" role="button">Donate</a>
       </ul>
     </div>
   </div>

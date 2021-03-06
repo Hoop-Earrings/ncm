@@ -2,6 +2,6 @@
 title: "Volunteer"
 draft: false
 bannerimage: "images/volunteer.jpg"
-bannercontent: "Volunteer"
+bannercontent: "Interested in volunteering? Fill out the form below and wait for us to get back to you!"
 ---
 Volunteer

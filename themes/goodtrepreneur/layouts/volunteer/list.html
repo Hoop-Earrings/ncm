@@ -1,29 +1,14 @@
 {{ define "main" }}
   <!-- Banner -->
-  <div class="bg-image" style = "background-image: url('{{ .Params.bannerimage | absURL }}'); background-size: cover; background-position: center; height: 50vh;">
+  <div class="bg-image" style = "background-image: url('{{ .Params.bannerimage | absURL }}'); background-size: cover; background-position: center; height: 90vh;">
     <div class="mask d-flex justify-content-center align-items-center">
       <div class = "container text-center">
         <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
       </div>
     </div>
   </div>
-  <div id = "volunteer" class="container col-sm-10 col-md-8 col-lg-6 text-center">
-    {{ if site.Data.volunteer.intro.enable }}
-      {{ with site.Data.volunteer.intro }}
-        <!-- Title -->
-        <h2>{{ .heading }}</h2>
-        <br>
-        <!-- Displays video -->
-        <div class="ratio ratio-16x9">
-          <iframe src="{{ .videoURL }}" allowfullscreen></iframe>
-        </div>
-        <br><br>
-        <!-- Section copy -->
-        <p>{{ .content | markdownify }}</p>
-        <br><br>
-      {{ end }}
-    {{ end }}
-    <!-- Volunteer form -->
+  <!-- Volunteer form -->
+  <div id = "volunteer-form" class="container col-sm-8 col-md-6 col-lg-4 text-center">
     {{ if site.Data.volunteer.form.enable }}
       {{ with site.Data.volunteer.form }}
         <!-- Embed form -->
@@ -31,15 +16,20 @@
         <br><br>
       {{ end }}
     {{ end }}
-    <!-- Button -->
-    {{ if site.Data.volunteer.button.enable }}
-      {{ with site.Data.volunteer.button }}
-        <!-- Button heading -->
-        <h4>{{ .heading }}</h4>
-        <br>
-        <!-- Button heading -->
-        <a class="btn btn-primary" href="{{ .link }}" role="button">{{ .label }}</a>
-      {{ end }}
-    {{ end }}
   </div>
+  <!-- Alternative -->
+  <div id = "volunteer-alt" class = "container-fluid">
+    <div class = "container text-center">
+      {{ if site.Data.volunteer.button.enable }}
+        {{ with site.Data.volunteer.button }}
+          <!-- Button heading -->
+          <h4>{{ .heading }}</h4>
+          <br>
+          <!-- Button heading -->
+          <a class="btn btn-primary" href="{{ .link }}" role="button">{{ .label }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
 {{ end }}
