@@ -1,7 +1,7 @@
 ############################ banner ##########################
 banner:
   enable : true
-  image : "images/stock14.jpg"
+  image : "images/homepage.jpg"
   content: "South bay's largest distribution center, serving over 1,000,000 people in 2020!"
   button:
     enable : true

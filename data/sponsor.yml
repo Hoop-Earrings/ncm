@@ -1,0 +1,80 @@
+---
+starsponsors:
+  # sponsor item loop
+  - name : "Amazon"
+    image : "images/sponsor/star/amazonprime.jpg"
+    url :
+
+  # sponsor item loop
+  - name : "Bristol Farms"
+    image : "images/sponsor/star/bristolfarms.png"
+    url :
+
+  # sponsor item loop
+  - name : "C4 Cross Connection"
+    image : "images/sponsor/star/c4crossconnection.jpg"
+    url :
+
+  # sponsor item loop
+  - name : "California Water"
+    image : "images/sponsor/star/CaliforniaWater.png"
+    url :
+
+  # sponsor item loop
+  - name : "Foodcycle"
+    image : "images/sponsor/star/foodcycle.png"
+    url :
+  # sponsor item loop
+  - name : "Food Forward"
+    image : "images/sponsor/star/foodforward.png"
+    url :
+
+  # sponsor item loop
+  - name : "GCC Canvas"
+    image : "images/sponsor/star/GCCCanvasLogo.png"
+    url :
+
+  # sponsor item loop
+  - name : "Givelist"
+    image : "images/sponsor/star/givelist.JPG"
+    url :
+
+  # sponsor item loop
+  - name : "Golden State Water"
+    image : "images/sponsor/star/goldenstatewater.png"
+    url :
+
+  # sponsor item loop
+  - name : "JLB"
+    image : "images/sponsor/star/JLB.png"
+    url :
+
+  # sponsor item loop
+  - name : "Lunada Bay"
+    image : "images/sponsor/star/lunadabay.png"
+    url :
+
+  # sponsor item loop
+  - name : "Mattucci"
+    image : "images/sponsor/star/mattucci.jpg"
+    url :
+
+  # sponsor item loop
+  - name : "NCL"
+    image : "images/sponsor/star/ncl.png"
+    url :
+
+  # sponsor item loop
+  - name : "PV Thrift"
+    image : "images/sponsor/star/pvthrift.JPG"
+    url :
+
+  # sponsor item loop
+  - name : "Vision Realty"
+    image : "images/sponsor/star/visionrealty.png"
+    url :
+
+  # sponsor item loop
+  - name : "Walmart"
+    image : "images/sponsor/star/walmart.jpg"
+    url :

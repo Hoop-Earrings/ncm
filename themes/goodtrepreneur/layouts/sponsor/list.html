@@ -1,7 +1,24 @@
 {{ define "main" }}
-<div class="banner-half">
-  <div class = "container text-center">
-    <h2 class="display-4"> {{.Content}} </h2>
+
+<!-- Banner -->
+<div class="bg-image" style = "background-image: url('{{ .Params.bannerimage | absURL }}'); background-size: cover; background-position: center; height: 50vh;">
+  <div class="mask d-flex justify-content-center align-items-center">
+    <div class = "container text-center">
+      <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
+    </div>
   </div>
 </div>
+
+<!-- Star Sponsors -->
+<div class = "container">
+  <div class = "row row-cols-3">
+    {{ range site.Data.sponsor.starsponsors }}
+      <div class="col">
+        <img src="{{ .image | absURL }}" class="img-fluid">
+        <p>{{ .name }}</p>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
 {{ end }}
