@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- Banner -->
-<div class="bg-image" style = "background-image: url('{{ .Params.bannerimage | absURL }}'); background-size: cover; background-position: center; height: 50vh;">
+<div class="bg-image" style = "background-image: url('{{ .Params.bannerimage | absURL }}'); background-size: cover; background-position: center; height: 90vh;">
   <div class="mask d-flex justify-content-center align-items-center">
     <div class = "container text-center">
       <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
@@ -9,15 +9,32 @@
   </div>
 </div>
 
-<!-- Star Sponsors -->
-<div class = "container">
-  <div class = "row row-cols-3">
+<!-- Sponsors -->
+<div id = "star-sponsors" class = "container text-center">
+  <!-- Star sponsors -->
+  <h1 class="display-6">{{ .Params.starsponsorslabel }}</h1>
+  <br>
+  <div class = "row row-cols-auto justify-content-center align-items-end">
     {{ range site.Data.sponsor.starsponsors }}
       <div class="col">
-        <img src="{{ .image | absURL }}" class="img-fluid">
-        <p>{{ .name }}</p>
+        <img class = "sponsor-images" src="{{ .image | absURL }}">
+        <h6>{{ .name }}</h6>
       </div>
     {{ end }}
+  </div>
+  <br>
+  <br>
+  <!-- Other sponsors -->
+  <h4>{{ .Params.othersponsorslabel }}</h4>
+  <p> {{ .Content }}</p>
+</div>
+
+<!-- Sponsor CTA -->
+<div id = "sponsor-cta" class = "container-fluid">
+  <div class = "container text-center">
+    <h4>{{ .Params.ctatext }}</h4>
+    <br>
+    <a class="btn btn-primary" href="{{ .Params.buttonlink }}" role="button">{{ .Params.buttonlabel }}</a>
   </div>
 </div>
 

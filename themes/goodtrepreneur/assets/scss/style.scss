@@ -77,6 +77,20 @@ $primary: #0000ff;
 	padding-bottom: 5vh;
   background-color: $light;
 }
+#star-sponsors {
+  padding-top: 5vh;
+	padding-bottom: 5vh;
+}
+.sponsor-images {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+#sponsor-cta {
+  padding-top: 5vh;
+	padding-bottom: 5vh;
+  background-color: $light;
+}
 #donate {
   padding-top: 5vh;
 	padding-bottom: 5vh;
