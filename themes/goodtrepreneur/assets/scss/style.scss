@@ -41,16 +41,23 @@ $primary: #0000ff;
   background-color: $dark;
 }
 #story {
-	padding-top: 10vmin;
-	padding-bottom: 10vmin;
+	padding-top: 5vmin;
+	padding-bottom: 5vmin;
 }
 #story .row {
-  	align-items: center;
+	align-items: center;
+}
+#story row {
+  height: 30vh;
+}
+.timeline-image img {
+  width: 100%;
+  object-fit: contain;
 }
 #testimonials {
 	padding-top: 5vmin;
 	padding-bottom: 5vmin;
-  background-color: $light;
+  background-color: $secondary;
 }
 #testimonials .card {
   height: 50vh;
@@ -63,6 +70,7 @@ $primary: #0000ff;
 #news {
 	padding-top: 5vmin;
 	padding-bottom: 5vmin;
+  background-color: $light;
 }
 #events {
   padding-top: 5vmin;

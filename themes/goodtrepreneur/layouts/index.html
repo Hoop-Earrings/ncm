@@ -22,15 +22,18 @@
 {{ if site.Data.homepage.about.enable }}
   {{ with site.Data.homepage.about }}
     <div id = "about" class = "container">
-      <div class="row justify-content-center">
+      <div class="row g-3">
+        <div class = "col-sm-2 text-center">
+          <img src="{{ .image | absURL }}" class="img-fluid rounded-circle" style="object-fit:contain;" alt="{{ .name | markdownify }}">
+        </div>
         <div class = "col-sm-1 align-self-start text-end">
           <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-chat-right-quote" viewBox="0 0 16 16">
             <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
             <path d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
           </svg>
         </div>
-        <div class = "col-sm-10 align-self-center">
-          <h5>{{ .content | markdownify }}</h5>
+        <div class = "col-sm-8 align-self-center">
+          <p><i>{{ .content | markdownify }}</i></p>
         </div>
         <div class = "col-sm-1 align-self-end">
           <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-chat-left-quote" viewBox="0 0 16 16">
@@ -40,10 +43,12 @@
         </div>
       </div>
       <br>
-      <div class="row justify-content-center">
-        <div class = "col-sm-10">
+      <div class="row g-3 justify-content-center">
+        <div class = "col-sm-3"></div>
+        <div class = "col-sm-8">
           <p class="blockquote-footer">{{ .name | markdownify }}, <cite title="Source Title">{{ .designation | markdownify }}</cite></p>
         </div>
+        <div class = "col-sm-1"></div>
       </div>
     </div>
   {{ end }}
@@ -65,15 +70,18 @@
   {{ with site.Data.homepage.story }}
     <div id = "story" class="container text-center">
       <h1 class="display-6">{{ .title | markdownify }}</h1>
-      <br>
-      <div class="row">
-        <div class="col-lg-6">
-          <img src="{{ .image | absURL }}" class="img-fluid" alt="{{ .name | markdownify }}">
+      {{ range site.Data.homepage.story.timelineItem }}
+        <div class="row m-3 g-3">
+          <div class="col-lg-4">
+            <div class ="timeline-image">
+              <img src="{{ .image | absURL }}" class = "img-fluid" alt="{{ .name | markdownify }}">
+            </div>
+          </div>
+          <div class="col-lg-8 align-self-start text-lg-start">
+            <p>{{ .text | markdownify }}</p>
+          </div>
         </div>
-        <div class="col-lg-6">
-          <p>{{ .content | markdownify }}</p>
-        </div>
-      </div>
+      {{ end }}
     </div>
   {{ end }}
 {{ end }}
@@ -81,11 +89,12 @@
 {{ if site.Data.homepage.testimonials.enable }}
   {{ with site.Data.homepage.testimonials }}
     <div id = "testimonials" class="container-fluid text-center">
-      <div id="carouseltestimonials" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <!-- <h1 class="display-6">{{ .title | markdownify }}</h1> -->
+      <div id="carouseltestimonials" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "eq" 1) }}
           <div class="carousel-item active">
-            <div class="card text-center col-sm-9 mx-auto">
+            <div class="card text-center col-sm-8 mx-auto">
               <img src="{{ .image | absURL }}" class="class-image-top mx-auto my-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
               <div class="card-body">
                 <h6 class="card-title">{{ .name | markdownify }}</h6>
@@ -97,7 +106,7 @@
           {{ end }}
           {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "ne" 1) }}
             <div class="carousel-item">
-              <div class="card text-center col-sm-9 mx-auto">
+              <div class="card text-center col-sm-8 mx-auto">
                 <img src="{{ .image | absURL }}" class="class-image-top mx-auto my-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
                 <div class="card-body">
                   <h6 class="card-title">{{ .name | markdownify }}</h6>
@@ -126,7 +135,7 @@
     <div id = "cta" class="container text-center">
       <div class = "container">
         <h1 class="display-6">{{ .title | markdownify }}</h1>
-        <div class = "row justify-content-center">
+        <div class = "row g-3 justify-content-center">
           <div class="col-sm-4 col-md-3">
             <div class="card h-100">
               <img src="/images/donate.png" class="card-img-top" alt="...">
