@@ -57,7 +57,7 @@
 {{ if site.Data.homepage.intro.enable }}
   {{ with site.Data.homepage.intro }}
     <div id ="intro" class = "container-fluid text-center">
-      <div class = "col-sm-8 mx-auto">
+      <div class = "col-sm-6 mx-auto">
         <div class="ratio ratio-16x9">
           <iframe src="{{ .videoURL | safeURL }}" allowfullscreen></iframe>
         </div>
@@ -138,8 +138,8 @@
         <div class = "row g-3 justify-content-center">
           <div class="col-sm-4 col-md-3">
             <div class="card h-100">
-              <img src="/images/donate.png" class="card-img-top" alt="...">
               <div class="card-body">
+                <img src="/images/donatelogo.png" width = 100px height = auto alt="...">
                 <h5 class="card-title">Donate</h5>
                 <p class="card-text">We are currently looking for cash and food donations.</p>
               </div>
@@ -148,8 +148,8 @@
             </div>
           <div class="col-sm-4 col-md-3">
             <div class="card h-100">
-              <img src="/images/volunteer.png" class="card-img-top" alt="...">
               <div class="card-body">
+                <img src="/images/volunteerlogo.png" width = 100px height = auto alt="...">
                 <h5 class="card-title">Volunteer</h5>
                 <p class="card-text">Check out our volunteer tab for more info.</p>
               </div>
@@ -158,8 +158,8 @@
           </div>
           <div class="col-sm-4 col-md-3">
             <div class="card h-100">
-              <img src="/images/sponsor.png" class="card-img-top" alt="...">
               <div class="card-body">
+                <img src="/images/sponsorlogo.png" width = 100px height = auto alt="...">
                 <h5 class="card-title">Sponsor</h5>
                 <p class="card-text">Support from our local businesses for both food and funds.</p>
               </div>

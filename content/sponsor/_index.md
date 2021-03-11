@@ -9,21 +9,30 @@ ctatext: "If your business is interested in donating money or goods, please reac
 buttonlink: "mailto:info@newchallengeministries.com"
 buttonlabel: "Contact us today!"
 ---
-Trader Joe’s |
-Ralph’s |
-Torrance Memorial Hospital |
+Cheesecake Factory, Redondo Beach |
+Harbor College Book Store |
+Harbor Gateway North Chamber |
 KFC |
-Pizza Hut |
-El Pollo Loco Restaurants |
+LA Shelby American Automobile Club |
+Larry H. Parker |
+Manhattan Beach Fire Dept. |
+McMaster Carr |
+Old Navy Stores |
 Olive Garden Restaurants |
-Island's Restaurants |
-Pepsi |
-St. Margaret Mary Catholic Church |
-Torrance Fire Department |
-Yogurtland |
+Pepsi Bottling Company |
+Pizza Hut |
+Ralph's |
+Redondo Beach Kiwanis |
 Restaurant Depot |
-Torrance Farmer’s Market |
+Sir Speedy |
 Smart & Final Foundation |
+South Bay Association of Realtors |
+Sprouts |
+St. Margaret Mary Catholic Church |
+Torrance Farmer's Market |
+Torrance Fire Department |
 Torrance Kiwanis Foundation |
-Redondo Beach Fire Dept. |
-Torrance Rotary
+Torrance Memorial Hospital |
+Torrance Rotary |
+Trader Joe's |
+Walmart

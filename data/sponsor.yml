@@ -1,7 +1,7 @@
 ---
 starsponsors:
   # sponsor item loop
-  - name : "Amazon"
+  - name : "Amazon Prime"
     image : "images/sponsor/star/amazonprime.jpg"
     url :
 
@@ -11,7 +11,7 @@ starsponsors:
     url :
 
   # sponsor item loop
-  - name : "C4 Cross Connection"
+  - name : "C4 Cross Connection Community Church"
     image : "images/sponsor/star/c4crossconnection.jpg"
     url :
 
@@ -30,12 +30,12 @@ starsponsors:
     url :
 
   # sponsor item loop
-  - name : "GCC Canvas"
+  - name : "Good Community Church"
     image : "images/sponsor/star/GCCCanvasLogo.png"
     url :
 
   # sponsor item loop
-  - name : "Givelist"
+  - name : "Givelist.com"
     image : "images/sponsor/star/givelist.JPG"
     url :
 
@@ -45,28 +45,33 @@ starsponsors:
     url :
 
   # sponsor item loop
-  - name : "JLB"
+  - name : "Jessie Lord Bakery"
     image : "images/sponsor/star/JLB.png"
     url :
 
   # sponsor item loop
-  - name : "Lunada Bay"
+  - name : "Lunada Bay Market"
     image : "images/sponsor/star/lunadabay.png"
     url :
 
   # sponsor item loop
-  - name : "Mattucci"
+  - name : "Mattucci Realty"
     image : "images/sponsor/star/mattucci.jpg"
     url :
 
   # sponsor item loop
-  - name : "NCL"
+  - name : "Max Sales Group"
+    image : "images/sponsor/star/maxsales.png"
+    url :
+
+  # sponsor item loop
+  - name : "National Charity League Pier Chapter"
     image : "images/sponsor/star/ncl.png"
     url :
 
   # sponsor item loop
-  - name : "PV Thrift"
-    image : "images/sponsor/star/pvthrift.JPG"
+  - name : "Palos Verdes Resale & Thrift Store"
+    image : "images/sponsor/star/pvthrift.png"
     url :
 
   # sponsor item loop
@@ -75,6 +80,6 @@ starsponsors:
     url :
 
   # sponsor item loop
-  - name : "Walmart"
+  - name : "Walmart Community Grant"
     image : "images/sponsor/star/walmart.jpg"
     url :
