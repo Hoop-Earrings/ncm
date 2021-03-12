@@ -3,83 +3,84 @@ starsponsors:
   # sponsor item loop
   - name : "Amazon Prime"
     image : "images/sponsor/star/amazonprime.jpg"
-    url :
+    url : https://www.amazon.com/amazonprime
 
   # sponsor item loop
   - name : "Bristol Farms"
     image : "images/sponsor/star/bristolfarms.png"
-    url :
+    url : https://www.bristolfarms.com/
 
   # sponsor item loop
   - name : "C4 Cross Connection Community Church"
     image : "images/sponsor/star/c4crossconnection.jpg"
-    url :
+    url : http://www.c4communitychurch.com/
 
   # sponsor item loop
   - name : "California Water"
     image : "images/sponsor/star/CaliforniaWater.png"
-    url :
+    url : https://www.calwater.com/
 
   # sponsor item loop
   - name : "Foodcycle"
     image : "images/sponsor/star/foodcycle.png"
-    url :
+    url : https://www.foodcyclela.org/
+	
   # sponsor item loop
   - name : "Food Forward"
     image : "images/sponsor/star/foodforward.png"
-    url :
+    url : https://foodforward.org/
 
   # sponsor item loop
   - name : "Good Community Church"
     image : "images/sponsor/star/GCCCanvasLogo.png"
-    url :
+    url : https://www.torrancegccem.org/
 
   # sponsor item loop
   - name : "Givelist.com"
     image : "images/sponsor/star/givelist.JPG"
-    url :
+    url : https://givelist.com/
 
   # sponsor item loop
   - name : "Golden State Water"
     image : "images/sponsor/star/goldenstatewater.png"
-    url :
+    url : https://www.gswater.com/
 
   # sponsor item loop
   - name : "Jessie Lord Bakery"
     image : "images/sponsor/star/JLB.png"
-    url :
+    url : https://www.jessielordbakery.com/
 
   # sponsor item loop
   - name : "Lunada Bay Market"
     image : "images/sponsor/star/lunadabay.png"
-    url :
+    url : https://lunadamarket.com/
 
   # sponsor item loop
   - name : "Mattucci Realty"
     image : "images/sponsor/star/mattucci.jpg"
-    url :
+    url : https://www.facebook.com/mattuccirealestate?fbclid=IwAR3M9c9ETM3GnKr9GSoenFJ2E0hBpkoPqcEldxzzZlJnlHotZL_H6g54jrw
 
   # sponsor item loop
   - name : "Max Sales Group"
     image : "images/sponsor/star/maxsales.png"
-    url :
+    url : https://maxsalesgroup.com/
 
   # sponsor item loop
   - name : "National Charity League Pier Chapter"
     image : "images/sponsor/star/ncl.png"
-    url :
+    url : https://www.nationalcharityleague.org/
 
   # sponsor item loop
   - name : "Palos Verdes Resale & Thrift Store"
     image : "images/sponsor/star/pvthrift.png"
-    url :
+    url : http://www.palosverdesresale.com/
 
   # sponsor item loop
   - name : "Vision Realty"
     image : "images/sponsor/star/visionrealty.png"
-    url :
+    url : http://www.visionrealtysells.com/
 
   # sponsor item loop
   - name : "Walmart Community Grant"
     image : "images/sponsor/star/walmart.jpg"
-    url :
+    url : https://walmart.org/how-we-give/local-community-grants
