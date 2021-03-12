@@ -3,6 +3,8 @@ donatemoney:
   enable : true
   heading: "Donate money"
   subheading : "lorem ipsum"
+  buttonlink: https://checkout.square.site/merchant/MLGF7ZDH98W3F/checkout/V5L7LAEVF4DRWI6CYLIMUC64?src=embed
+  buttonlabel: "Donate"
 
 ############################ alternatives ##########################
 alternatives:

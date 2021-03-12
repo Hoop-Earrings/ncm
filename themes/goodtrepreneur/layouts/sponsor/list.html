@@ -1,11 +1,9 @@
 {{ define "main" }}
 
 <!-- Banner -->
-<div class="bg-image" style = "background-image: url('{{ .Params.bannerimage | absURL }}'); background-size: cover; background-position: center; height: 90vh;">
-  <div class="mask d-flex justify-content-center align-items-center">
-    <div class = "container text-center">
-      <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
-    </div>
+<div class="hero d-flex align-items-center" style = "background-image: url('{{ .Params.bannerimage | absURL }}')">
+  <div class = "container text-center">
+    <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
   </div>
 </div>
 
@@ -15,16 +13,19 @@
   <h1 class="display-6">{{ .Params.starsponsorslabel }}</h1>
   <br>
   <div class = "row row-cols-auto justify-content-center align-items-end">
-    {{ range site.Data.sponsor.starsponsors }}
+    {{ range sort site.Data.sponsor.starsponsors "name" }}
       <div class="col">
+        <a href = "{{ .url }}">
         <img class = "sponsor-images" src="{{ .image | absURL }}">
+        </a>
         <h6>{{ .name }}</h6>
       </div>
     {{ end }}
   </div>
-  <br>
-  <br>
-  <!-- Other sponsors -->
+</div>
+
+<!-- Other sponsors -->
+<div id = "other-sponsors" class = "container text-center">
   <h4>{{ .Params.othersponsorslabel }}</h4>
   <p> {{ .Content }}</p>
 </div>

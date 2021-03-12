@@ -1,17 +1,15 @@
 {{ define "main" }}
 <!-- Banner -->
-<div class="bg-image" style = "background-image: url('{{ .Params.bannerimage | absURL }}'); background-size: cover; background-position: center; height: 90vh;">
-  <div class="mask d-flex justify-content-center align-items-center">
-    <div class = "container text-center">
-      <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
-    </div>
+<div class="hero d-flex align-items-center" style = "background-image: url('{{ .Params.bannerimage | absURL }}')">
+  <div class = "container text-center">
+    <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
   </div>
 </div>
 <div id = "events" class = "container text-center">
 <!-- Iterate through pages -->
   {{ range (.Pages.ByParam "eventdate").Reverse }}
   <!-- Create card -->
-  <div class="card col-sm-10 col-md-8 col-lg-6 mx-auto m-3">
+  <div class="card col-sm-10 col-md-8 col-lg-6 col-xl-4 mx-auto m-3">
     <!-- Displays video if there is one specified else displays the image -->
     {{ with .Param "video" }}
     <div class="ratio ratio-16x9">

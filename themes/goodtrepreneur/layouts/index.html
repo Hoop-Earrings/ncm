@@ -3,17 +3,15 @@
 <!-- Banner -->
 {{ if site.Data.homepage.banner.enable }}
   {{ with site.Data.homepage.banner }}
-    <div class="bg-image" style = "background-image: url('{{ .image | absURL }}'); background-size: cover; background-position: center; height: 90vh;">
-      <div class="mask d-flex justify-content-center align-items-center">
-        <div class = "container text-center">
-          <h1 class="display-4"> {{ .content | markdownify }} </h1>
-          {{ if .button.enable }}
-            {{ with .button }}
-              <br>
-              <a class="btn btn-primary btn-lg" href="{{ .link }}" role="button">{{ .label }}</a>
-            {{ end }}
+    <div class="hero d-flex align-items-center" style = "background-image: url('{{ .image | absURL }}')">
+      <div class = "container text-center">
+        <h1 class="display-4"> {{ .content | markdownify }} </h1>
+        {{ if .button.enable }}
+          {{ with .button }}
+            <br>
+            <a class="btn btn-primary btn-lg" href="{{ .link }}" role="button">{{ .label }}</a>
           {{ end }}
-        </div>
+        {{ end }}
       </div>
     </div>
   {{ end }}

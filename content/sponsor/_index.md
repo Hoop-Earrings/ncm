@@ -1,7 +1,7 @@
 ---
 title: "Sponsor"
 draft: false
-bannerimage: "images/sponsor.jpg"
+bannerimage: "images/sponsor.png"
 bannercontent: "We are a registered 501(c)(3) non-profit organization. Donations from businesses small and large help us serve our community!"
 starsponsorslabel: "Major Donors"
 othersponsorslabel: "... and our special thanks to the many wonderful organizations that keep up running"

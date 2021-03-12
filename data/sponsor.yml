@@ -24,7 +24,7 @@ starsponsors:
   - name : "Foodcycle"
     image : "images/sponsor/star/foodcycle.png"
     url : https://www.foodcyclela.org/
-	
+
   # sponsor item loop
   - name : "Food Forward"
     image : "images/sponsor/star/foodforward.png"

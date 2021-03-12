@@ -1,10 +1,8 @@
 {{ define "main" }}
   <!-- Banner -->
-  <div class="bg-image" style = "background-image: url('{{ .Params.bannerimage | absURL }}'); background-size: cover; background-position: center; height: 90vh;">
-    <div class="mask d-flex justify-content-center align-items-center">
-      <div class = "container text-center">
-        <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
-      </div>
+  <div class="hero d-flex align-items-center" style = "background-image: url('{{ .Params.bannerimage | absURL }}')">
+    <div class = "container text-center">
+      <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
     </div>
   </div>
   <div id = "donate" class="container col-sm-10 col-md-8 col-lg-6 text-center">
@@ -12,32 +10,11 @@
     {{ if site.Data.donate.donatemoney.enable }}
       {{ with site.Data.donate.donatemoney }}
         <h2>{{ .heading }}</h2>
+        <a class="btn btn-primary btn-lg" href="{{ .buttonlink }}" role="button">{{ .buttonlabel }}</a>
+        <p>All donations are tax deductible as allowed by law.</p>
         <br><br>
       {{ end }}
     {{ end }}
-    <!-- Square Donate button -->
-    <div style="overflow: auto;">
-      <p style="
-        font-family: SQ Market;
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 500;">NCM</p>
-      <a target="_blank" href="https://checkout.square.site/merchant/MLGF7ZDH98W3F/checkout/V5L7LAEVF4DRWI6CYLIMUC64?src=embed" style="
-        display: inline-block;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 18px;
-        line-height: 48px;
-        height: 48px;
-        padding-left: 48px;
-        padding-right: 48px;
-        color: #FFFFFF;
-        min-width: 165px;
-        background-color: #4E6C98;
-        border-radius: 4px;
-        text-align: center;
-        box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-      ">Donate</a>
-    </div>
     <!-- Alternatives -->
     {{ if site.Data.donate.alternatives.enable }}
       {{ with site.Data.donate.alternatives }}
