@@ -47,27 +47,20 @@ $primary: #0000ff;
 	padding-bottom: 5vmin;
 }
 #story {
-	padding-top: 5vmin;
-	padding-bottom: 5vmin;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	padding-left: 10vw;
+	padding-right: 10vw;
 }
-#story .row {
-	align-items: center;
-}
-#story row {
-  height: 30vh;
-}
-.timeline-image img {
-  width: 100%;
-  object-fit: contain;
+#story .square {
+	background-size: cover;
+	background-position: center;
+	padding-bottom:100%;
 }
 #testimonials {
 	padding-top: 5vmin;
 	padding-bottom: 5vmin;
-  background-color: $secondary;
-}
-#testimonials .card {
-  height: 50vh;
-  overflow: scroll;
+  background-color: $light;
 }
 #cta {
 	padding-top: 5vmin;
@@ -111,6 +104,9 @@ $primary: #0000ff;
 }
 #donate {
   padding-top: 5vh;
+	padding-bottom: 5vh;
+}
+#donate-alt {
 	padding-bottom: 5vh;
 }
 #footer-top {

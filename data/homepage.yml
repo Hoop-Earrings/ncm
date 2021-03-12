@@ -49,8 +49,15 @@ story:
 
     - image : "images/lauraandteam.png"
       weight : 4
-      text :  "In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people for the first time within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far. With your help, New Challenge Ministries can keep helping millions of people in need every year."
+      text :  "In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people for the first time within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far."
 
+    - image : "images/lauraandteam.png"
+      weight : 5
+      text :  "In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people for the first time within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far."
+
+    - image : "images/lauraandteam.png"
+      weight : 6
+      text :  "In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people for the first time within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far."
 
 ###################### news ########################
 news:

@@ -16,6 +16,7 @@
     </div>
   {{ end }}
 {{ end }}
+
 <!-- About section -->
 {{ if site.Data.homepage.about.enable }}
   {{ with site.Data.homepage.about }}
@@ -51,6 +52,7 @@
     </div>
   {{ end }}
 {{ end }}
+
 <!-- Intro video -->
 {{ if site.Data.homepage.intro.enable }}
   {{ with site.Data.homepage.intro }}
@@ -63,76 +65,60 @@
     </div>
   {{ end }}
 {{ end }}
+
 <!-- Our story section -->
 {{ if site.Data.homepage.story.enable }}
   {{ with site.Data.homepage.story }}
     <div id = "story" class="container text-center">
       <h1 class="display-6">{{ .title | markdownify }}</h1>
-      {{ range site.Data.homepage.story.timelineItem }}
-        <div class="row m-3 g-3">
-          <div class="col-lg-4">
-            <div class ="timeline-image">
-              <img src="{{ .image | absURL }}" class = "img-fluid" alt="{{ .name | markdownify }}">
+      <br>
+      <div class = "row row-cols-auto g-4">
+        {{ range sort site.Data.homepage.story.timelineItem "weight" }}
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card rounded h-100">
+              <div class="card-body p-3">
+                <div class = "square" style = "background-image: url('{{ .image | absURL }}')"></div>
+                <br>
+                <p class="card-text"><small>{{ .text | markdownify }}</small></p>
+              </div>
             </div>
           </div>
-          <div class="col-lg-8 align-self-start text-lg-start">
-            <p>{{ .text | markdownify }}</p>
-          </div>
-        </div>
-      {{ end }}
+        {{ end }}
+      </div>
     </div>
   {{ end }}
 {{ end }}
+
 <!-- Testimonials -->
 {{ if site.Data.homepage.testimonials.enable }}
   {{ with site.Data.homepage.testimonials }}
-    <div id = "testimonials" class="container-fluid text-center">
-      <!-- <h1 class="display-6">{{ .title | markdownify }}</h1> -->
-      <div id="carouseltestimonials" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "eq" 1) }}
-          <div class="carousel-item active">
-            <div class="card text-center col-sm-8 mx-auto">
-              <img src="{{ .image | absURL }}" class="class-image-top mx-auto my-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
-              <div class="card-body">
-                <h6 class="card-title">{{ .name | markdownify }}</h6>
-                <h6 class="card-subtitle mb-3 text-muted">{{ .designation | markdownify }}</h6>
-                <p class="card-text">{{ .content | markdownify }}</p>
-              </div>
-            </div>
+    <div id = "testimonials" class="container-fluid">
+      <div class = "container text-center">
+        <h1 class="display-6">{{ .title | markdownify }}</h1>
+        <br>
+        {{ range sort site.Data.homepage.testimonials.testimonialItem "weight" }}
+        <div class="row g-2">
+          <div class="col-md-2 align-self-center text-md-start">
+            <img src="{{ .image | absURL }}" class="img-fluid mx-auto my-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
           </div>
-          {{ end }}
-          {{ range (where site.Data.homepage.testimonials.testimonialItem "weight" "ne" 1) }}
-            <div class="carousel-item">
-              <div class="card text-center col-sm-8 mx-auto">
-                <img src="{{ .image | absURL }}" class="class-image-top mx-auto my-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
-                <div class="card-body">
-                  <h6 class="card-title">{{ .name | markdownify }}</h6>
-                  <h6 class="card-subtitle mb-3 text-muted">{{ .designation | markdownify }}</h6>
-                  <p class="card-text">{{ .content | markdownify }}</p>
-                </div>
-              </div>
-            </div>
-          {{ end }}
+          <div class = "col-md-10 align-self-center text-md-start">
+            <p><i>{{ .content | markdownify }}</i></p>
+            <p class="blockquote-footer">{{ .name | markdownify }}, <cite title="Source Title">{{ .designation | markdownify }}</cite></p>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouseltestimonials"  data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouseltestimonials"  data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        {{ end }}
+      </div>
     </div>
-  </div>
   {{ end }}
 {{ end }}
+
 <!-- Call to action -->
 {{ if site.Data.homepage.cta.enable }}
   {{ with site.Data.homepage.cta }}
     <div id = "cta" class="container text-center">
       <div class = "container">
         <h1 class="display-6">{{ .title | markdownify }}</h1>
+        <br>
         <div class = "row g-3 justify-content-center">
           <div class="col-sm-4 col-md-3">
             <div class="card h-100">
@@ -141,7 +127,7 @@
                 <h5 class="card-title">Donate</h5>
                 <p class="card-text">We are currently looking for cash and food donations.</p>
               </div>
-              <div class="card-footer"><a href="/donate" class="btn btn-primary">Donate</a></div>
+              <div class="card-footer"><a href="/donate" class="btn btn-primary stretched-link">Donate</a></div>
             </div>
             </div>
           <div class="col-sm-4 col-md-3">
@@ -151,7 +137,7 @@
                 <h5 class="card-title">Volunteer</h5>
                 <p class="card-text">Check out our volunteer tab for more info.</p>
               </div>
-              <div class="card-footer"><a href="/volunteer" class="btn btn-primary">Volunteer</a></div>
+              <div class="card-footer"><a href="/volunteer" class="btn btn-primary stretched-link">Volunteer</a></div>
             </div>
           </div>
           <div class="col-sm-4 col-md-3">
@@ -161,7 +147,7 @@
                 <h5 class="card-title">Sponsor</h5>
                 <p class="card-text">Support from our local businesses for both food and funds.</p>
               </div>
-              <div class="card-footer"><a href="/sponsor" class="btn btn-primary">Sponsor</a></div>
+              <div class="card-footer"><a href="/sponsor" class="btn btn-primary stretched-link">Sponsor</a></div>
             </div>
           </div>
         </div>
@@ -169,11 +155,13 @@
     </div>
   {{ end }}
 {{ end }}
+
 <!-- Facebook newsfeed -->
 {{ if site.Data.homepage.news.enable }}
   {{ with site.Data.homepage.news }}
     <div id = "news" class="container-fluid text-center">
       <h1 class="display-6">{{ .title | markdownify }}</h1>
+      <br>
       <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F{{ .fbname | markdownify }}&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div>
   {{ end }}

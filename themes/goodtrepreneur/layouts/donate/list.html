@@ -5,44 +5,58 @@
       <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
     </div>
   </div>
-  <div id = "donate" class="container col-sm-10 col-md-8 col-lg-6 text-center">
-    <!-- Donate money -->
-    {{ if site.Data.donate.donatemoney.enable }}
-      {{ with site.Data.donate.donatemoney }}
-        <h2>{{ .heading }}</h2>
-        <a class="btn btn-primary btn-lg" href="{{ .buttonlink }}" role="button">{{ .buttonlabel }}</a>
-        <p>All donations are tax deductible as allowed by law.</p>
-        <br><br>
-      {{ end }}
-    {{ end }}
-    <!-- Alternatives -->
-    {{ if site.Data.donate.alternatives.enable }}
-      {{ with site.Data.donate.alternatives }}
-        <h2>{{ .heading }}</h2>
-        <br><br>
-      {{ end }}
-    {{ end }}
-    <!-- Donate goods -->
-    {{ if site.Data.donate.donategoods.enable }}
-      {{ with site.Data.donate.donategoods }}
-        <!-- Heading -->
-        <h4>{{ .heading }}</h4>
-        <br>
-        <!-- Embed form -->
-        <iframe class="airtable-embed airtable-dynamic-height" src="{{ .embedlink }}" frameborder="0" onmousewheel="" width="100%" height=auto style="background: transparent; border: 1px solid #ccc;"></iframe>
-        <br><br>
-      {{ end }}
-    {{ end }}
-    <!-- Donate time -->
-    {{ if site.Data.donate.donatetime.enable }}
-      {{ with site.Data.donate.donatetime }}
-        <!-- Heading -->
-        <h4>{{ .heading }}</h4>
-        <h6>{{ .subheading }}</h6>
-        <br>
-        <!-- Button -->
-        <a class="btn btn-primary" href="{{ .link }}" role="button">{{ .label }}</a>
-      {{ end }}
-    {{ end }}
-  </div>
+
+
+<!-- Donate money -->
+{{ if site.Data.donate.donatemoney.enable }}
+  {{ with site.Data.donate.donatemoney }}
+    <div id = "donate" class="container col-sm-10 col-md-8 col-lg-6 text-center">
+      <h2>{{ .heading }}</h2>
+      <br>
+      <a class="btn btn-primary btn-lg" href="{{ .buttonlink }}" role="button">{{ .buttonlabel }}</a>
+      <p><i><br>*All donations are tax deductible as allowed by law.</i></p>
+      </div>
+  {{ end }}
+{{ end }}
+
+
+<!-- Alternatives -->
+{{ if site.Data.donate.alternatives.enable }}
+  {{ with site.Data.donate.alternatives }}
+    <div id = "donate-alt" class="container col-sm-10 col-md-8 col-lg-6 text-center">
+      <h2>{{ .heading }}</h2>
+      <br>
+      <div class="accordion" id="accordionExample">
+       <div class="accordion-item">
+         <h2 class="accordion-header" id="headingOne">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+             Donate goods
+           </button>
+         </h2>
+         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+             <iframe class="airtable-embed airtable-dynamic-height" src="{{ site.Data.donate.donategoods.embedlink }}" frameborder="0" onmousewheel="" width="100%" height=auto style="background: transparent; border: 1px solid #ccc;"></iframe>
+           </div>
+         </div>
+       </div>
+       <div class="accordion-item">
+         <h2 class="accordion-header" id="headingTwo">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+             Donate time
+           </button>
+         </h2>
+         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+             {{ site.Data.donate.donatetime.subheading }}
+             <br>
+             <a class="btn btn-primary" href="{{ site.Data.donate.donatetime.link }}" role="button">{{ site.Data.donate.donatetime.label }}</a>
+
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
+
 {{ end }}
