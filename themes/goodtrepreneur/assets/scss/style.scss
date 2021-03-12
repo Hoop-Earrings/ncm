@@ -111,6 +111,25 @@ $primary: #0000ff;
   padding-top: 1em;
 	padding-bottom: 1em;
 }
+.fab {
+	font-size: 40px;
+
+}
+.social-links {
+	text-decoration: none;
+	font-size: 40px;
+	color: black;
+}
+@media screen and (max-width: 380px) {
+	.fab {
+		font-size: 30px;
+	}
+	.social-links {
+		font-size: 20px;
+		margin-left: 10px;
+	}
+}
+
 // .footer-header {
 //   padding-top: 25px;
 //   padding-bottom: 25px;
