@@ -164,17 +164,21 @@
     <div id = "news" class="container-fluid g-3 text-center">
        <h1 class="display-6">{{ .title | markdownify }}</h1>
         <br>
+        <div class="container">
         <div class="row justify-content-center text-center">
-          <div class=" col-md-6 fb-page" data-href="https://www.facebook.com/{{ .fbname | markdownify }}" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/goodtrepreneur" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/goodtrepreneur">Goodtrepreneur</a></blockquote></div>
+          <div class=" col-md-6 fb-page" data-href="https://www.facebook.com/{{ .fbname | markdownify }}" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/goodtrepreneur" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/goodtrepreneur">Goodtrepreneur</a></blockquote></div>
           <div class="col-md-6">
             <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-            <iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrn90PESvyqmS1g8?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="300" style="background: transparent; border: 1px solid #ccc;"></iframe>
-            <ul class="fa-ul justify-content-center">
-              <li><i class="fa-li fab fa-facebook-square" style="color: navy"></i><a class="social-links" target="_blank" href="http://www.facebook.com/{{ .fbname | markdownify}}">{{ .fbtitle | markdownify}}</a></li><br>
-              <li><i class="fa-li fab fa-instagram" style="color: darkviolet"></i><a class="social-links" target="_blank" href="https://instagram.com/{{ .insta | markdownify}}">#{{ .insta | markdownify}}</a></li><br>
-              <li><i class="fa-li fab fa-youtube" style="color: red"></i><a class="social-links" target="_blank" href="http://www.youtube.com/playlist?list={{ .ytid | markdownify}}">{{ .fbtitle | markdownify}}</a></li><br>
-            </ul><br>
+            <iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrn90PESvyqmS1g8?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="300" style="background: transparent; border: 1px solid #ccc;"></iframe><br><br>
+            <div class="row">
+            <a class="social-links col-md-4" target="_blank" href="http://www.facebook.com/{{ .fbname | markdownify}}"><i class="fab fa-facebook-square" style="color: navy"></i></a>
+            <a class="social-links col-md-4" target="_blank" href="https://instagram.com/{{ .insta | markdownify}}"><i class="fab fa-instagram" style="color: darkviolet"></i> </a>
+            <a class="social-links col-md-4" target="_blank" href="http://www.youtube.com/playlist?list={{ .ytid | markdownify}}"><i class="fab fa-youtube" style="color: red"></i> </a>
+            </div>
+            </div>
+            <br>
           </div>
+        </div>
         </div>
         <br>
   {{ end }}
