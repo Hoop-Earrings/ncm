@@ -57,6 +57,7 @@
 {{ if site.Data.homepage.intro.enable }}
   {{ with site.Data.homepage.intro }}
     <div id ="intro" class = "container-fluid text-center">
+      <h1 class="display-6 text-white">{{ .title | markdownify }}</h1>
       <div class = "col-sm-6 mx-auto">
         <div class="ratio ratio-16x9">
           <iframe src="{{ .videoURL | safeURL }}" allowfullscreen></iframe>
@@ -98,7 +99,7 @@
         <br>
         {{ range sort site.Data.homepage.testimonials.testimonialItem "weight" }}
         <div class="row g-2">
-          <div class="col-md-2 align-self-center text-md-start">
+          <div class="col-md-2 align-self-center text-md-center">
             <img src="{{ .image | absURL }}" class="img-fluid mx-auto my-3 rounded-circle" style="width:100px;" alt="{{ .name | markdownify }}">
           </div>
           <div class = "col-md-10 align-self-center text-md-start">
