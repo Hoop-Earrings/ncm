@@ -17,6 +17,36 @@
     <script src="https://testing.goodtrepreneur.com/bootstrap/js/bootstrap.min.js"></script>
 
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <script>
+        var changeFBPagePlugin = function () {
+            var container_width = Number($('.fb-container').width()).toFixed(0);
+    
+            if (!isNaN(container_width)) {
+                $('.fb-page').attr('data-width', container_width)
+            }
+            if (typeof FB !== 'undefined') {
+                FB.XFBML.parse();
+            }
+        }
+    
+        $(window).on('resize', () => {
+            setTimeout(() => {
+                changeFBPagePlugin() }, 500);
+        })
+    
+        $(window).on('load', () => {
+            setTimeout(() => {
+                changeFBPagePlugin() }, 1500);
+        });
+    </script>
+
+    
+    <script src="https://kit.fontawesome.com/d940519860.js" crossorigin="anonymous"></script>
+    
+    
     <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
 </head>
 <body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
@@ -293,11 +323,28 @@
 
 
   
-    <div id = "news" class="container-fluid text-center">
-      <h1 class="display-6">News</h1>
-      <br>
-      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgoodtrepreneur&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    </div>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="tooWYNxO"></script>
+    <div id = "news" class="container-fluid g-3 text-center">
+       <h1 class="display-6">News</h1>
+        <br>
+        <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class=" col-md-6 fb-page" data-href="https://www.facebook.com/NewChallengeMinistriesInc" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/goodtrepreneur" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/goodtrepreneur">Goodtrepreneur</a></blockquote></div>
+          <div class="col-md-6">
+            
+            <iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrn90PESvyqmS1g8?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="300" style="background: transparent; border: 1px solid #ccc;"></iframe><br><br>
+            <div class="row">
+            <a class="social-links col-md-4" target="_blank" href="http://www.facebook.com/NewChallengeMinistriesInc"><i class="fab fa-facebook-square" style="color: navy"></i></a>
+            <a class="social-links col-md-4" target="_blank" href="https://instagram.com/newchallengeministries"><i class="fab fa-instagram" style="color: darkviolet"></i> </a>
+            <a class="social-links col-md-4" target="_blank" href="http://www.youtube.com/playlist?list=PLrVrrzJqZQ0u8MCVdm4sIlTWvu3SJXd1z"><i class="fab fa-youtube" style="color: red"></i> </a>
+            </div>
+            </div>
+            <br>
+          </div>
+        </div>
+        </div>
+        <br>
   
 
 
