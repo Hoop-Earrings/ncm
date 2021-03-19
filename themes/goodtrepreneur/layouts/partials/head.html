@@ -14,6 +14,36 @@
     {{ $bootstrapjs := resources.Get "bootstrap/js/bootstrap.min.js" }}
     <script src="{{ $bootstrapjs.Permalink }}"></script>
 
+    <!-- JQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Responsive Facebook Feed -->
+    <script>
+        var changeFBPagePlugin = function () {
+            var container_width = Number($('.fb-container').width()).toFixed(0);
+    
+            if (!isNaN(container_width)) {
+                $('.fb-page').attr('data-width', container_width)
+            }
+            if (typeof FB !== 'undefined') {
+                FB.XFBML.parse();
+            }
+        }
+    
+        $(window).on('resize', () => {
+            setTimeout(() => {
+                changeFBPagePlugin() }, 500);
+        })
+    
+        $(window).on('load', () => {
+            setTimeout(() => {
+                changeFBPagePlugin() }, 1500);
+        });
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/d940519860.js" crossorigin="anonymous"></script>
+    
     <!-- Airtable JS -->
     <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
 </head>

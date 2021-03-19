@@ -17,6 +17,36 @@
     <script src="https://testing.goodtrepreneur.com/bootstrap/js/bootstrap.min.js"></script>
 
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <script>
+        var changeFBPagePlugin = function () {
+            var container_width = Number($('.fb-container').width()).toFixed(0);
+    
+            if (!isNaN(container_width)) {
+                $('.fb-page').attr('data-width', container_width)
+            }
+            if (typeof FB !== 'undefined') {
+                FB.XFBML.parse();
+            }
+        }
+    
+        $(window).on('resize', () => {
+            setTimeout(() => {
+                changeFBPagePlugin() }, 500);
+        })
+    
+        $(window).on('load', () => {
+            setTimeout(() => {
+                changeFBPagePlugin() }, 1500);
+        });
+    </script>
+
+    
+    <script src="https://kit.fontawesome.com/d940519860.js" crossorigin="anonymous"></script>
+    
+    
     <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
 </head>
 <body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
@@ -131,6 +161,7 @@
 
   
     <div id ="intro" class = "container-fluid text-center">
+      <h1 class="display-6 text-white">Our latest event</h1>
       <div class = "col-sm-6 mx-auto">
         <div class="ratio ratio-16x9">
           <iframe src="https://www.youtube.com/embed/ka3jjVKEMJM" allowfullscreen></iframe>
@@ -143,51 +174,53 @@
 
 
   
-    <div id = "story" class="container text-center">
-      <h1 class="display-6">Our story</h1>
-      <br>
-      <div class = "row row-cols-auto g-3">
-        
-          <div class="col-sm-12 col-md-6 col-lg-3">
-            <div class="card rounded h-100">
-              <div class="card-body p-3">
-                <div class = "square" style = "background-image: url('https://testing.goodtrepreneur.com/images/story1.jpg')"></div>
-                <br>
-                <p class="card-text"><small>Since it’s inception in 1981, New Challenge Ministries has sought to help those struggling with life-controlling substance problems such as drugs and alcohol. In 1979 Pastor John moved to Southern California from Montana and quickly set about founding New Challenge Ministries in 1981 with Reverend Mark Flick and John Snider.</small></p>
+    <div id = "story" class="container-fluid text-center">
+      <div class = "container">
+        <h1 class="display-6">Our story</h1>
+        <br>
+        <div class = "row row-cols-auto g-3">
+          
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card rounded h-100">
+                <div class="card-body p-3">
+                  <div class = "square" style = "background-image: url('https://testing.goodtrepreneur.com/images/story1.jpg')"></div>
+                  <br>
+                  <p class="card-text"><small>In 1979 Pastor John moved to Southern California from Montana and quickly set about founding New Challenge Ministries in 1981 with Reverend Mark Flick and John Snider.</small></p>
+                </div>
               </div>
             </div>
-          </div>
-        
-          <div class="col-sm-12 col-md-6 col-lg-3">
-            <div class="card rounded h-100">
-              <div class="card-body p-3">
-                <div class = "square" style = "background-image: url('https://testing.goodtrepreneur.com/images/story2.jpg')"></div>
-                <br>
-                <p class="card-text"><small>In 1994 Pastor John met his wife, Laura. She quickly became involved in New Challenge Ministries, bringing years of experience in customer service and a heart for helping people, the charity quickly took on the form we know of it today.</small></p>
+          
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card rounded h-100">
+                <div class="card-body p-3">
+                  <div class = "square" style = "background-image: url('https://testing.goodtrepreneur.com/images/story2.jpg')"></div>
+                  <br>
+                  <p class="card-text"><small>In 1994 Pastor John met his wife, Laura. She quickly became involved in New Challenge Ministries, bringing years of experience in customer service and a heart for helping people, the charity quickly took on the form we know of it today.</small></p>
+                </div>
               </div>
             </div>
-          </div>
-        
-          <div class="col-sm-12 col-md-6 col-lg-3">
-            <div class="card rounded h-100">
-              <div class="card-body p-3">
-                <div class = "square" style = "background-image: url('https://testing.goodtrepreneur.com/images/loadingupproduce.png')"></div>
-                <br>
-                <p class="card-text"><small>In 2006, Pastor John and his wife Laura began distributing food to combat the ever-growing problem of food inequality. Their goal is to ensure that everyone who calls, writes, or comes to New Challenge experiences respect, dignity and humanity.</small></p>
+          
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card rounded h-100">
+                <div class="card-body p-3">
+                  <div class = "square" style = "background-image: url('https://testing.goodtrepreneur.com/images/loadingupproduce.png')"></div>
+                  <br>
+                  <p class="card-text"><small>In 2006, Pastor John and his wife Laura began distributing food to combat the ever-growing problem of food inequality. Their goal is to ensure that everyone who calls, writes, or comes to New Challenge experiences respect, dignity and humanity.</small></p>
+                </div>
               </div>
             </div>
-          </div>
-        
-          <div class="col-sm-12 col-md-6 col-lg-3">
-            <div class="card rounded h-100">
-              <div class="card-body p-3">
-                <div class = "square" style = "background-image: url('https://testing.goodtrepreneur.com/images/lauraandteam.png')"></div>
-                <br>
-                <p class="card-text"><small>In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people for the first time within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far.</small></p>
+          
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card rounded h-100">
+                <div class="card-body p-3">
+                  <div class = "square" style = "background-image: url('https://testing.goodtrepreneur.com/images/lauraandteam.png')"></div>
+                  <br>
+                  <p class="card-text"><small>In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far.</small></p>
+                </div>
               </div>
             </div>
-          </div>
-        
+          
+        </div>
       </div>
     </div>
   
@@ -202,7 +235,7 @@
         <br>
         
         <div class="row g-2">
-          <div class="col-md-2 align-self-center text-md-start">
+          <div class="col-md-2 align-self-center text-md-center">
             <img src="https://testing.goodtrepreneur.com/images/jenniferselkin.png" class="img-fluid mx-auto my-3 rounded-circle" style="width:100px;" alt="Jennifer S. Elkin">
           </div>
           <div class = "col-md-10 align-self-center text-md-start">
@@ -212,7 +245,7 @@
         </div>
         
         <div class="row g-2">
-          <div class="col-md-2 align-self-center text-md-start">
+          <div class="col-md-2 align-self-center text-md-center">
             <img src="https://testing.goodtrepreneur.com/images/neslieakkol.png" class="img-fluid mx-auto my-3 rounded-circle" style="width:100px;" alt="Neslie Akkol">
           </div>
           <div class = "col-md-10 align-self-center text-md-start">
@@ -222,7 +255,7 @@
         </div>
         
         <div class="row g-2">
-          <div class="col-md-2 align-self-center text-md-start">
+          <div class="col-md-2 align-self-center text-md-center">
             <img src="https://testing.goodtrepreneur.com/images/placeholder1.png" class="img-fluid mx-auto my-3 rounded-circle" style="width:100px;" alt="Emmanuel G. Marquez">
           </div>
           <div class = "col-md-10 align-self-center text-md-start">
@@ -232,7 +265,7 @@
         </div>
         
         <div class="row g-2">
-          <div class="col-md-2 align-self-center text-md-start">
+          <div class="col-md-2 align-self-center text-md-center">
             <img src="https://testing.goodtrepreneur.com/images/brunoperron.png" class="img-fluid mx-auto my-3 rounded-circle" style="width:100px;" alt="Bruno Perron">
           </div>
           <div class = "col-md-10 align-self-center text-md-start">
@@ -249,7 +282,7 @@
 
 
   
-    <div id = "cta" class="container text-center">
+    <div id = "cta" class="container-fluid text-center">
       <div class = "container">
         <h1 class="display-6">Get involved</h1>
         <br>
@@ -293,11 +326,24 @@
 
 
   
-    <div id = "news" class="container-fluid text-center">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="tooWYNxO"></script>
+    <div id = "news" class="container-fluid g-3 text-center">
       <h1 class="display-6">News</h1>
       <br>
-      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgoodtrepreneur&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    </div>
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class=" col-md-6 fb-page" data-href="https://www.facebook.com/Goodtrepreneur" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/goodtrepreneur" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/goodtrepreneur">Goodtrepreneur</a></blockquote></div>
+          <div class="col-md-6">
+            <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
+            <iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrn90PESvyqmS1g8?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="auto" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            
+          </div>
+            <br>
+          </div>
+      </div>
+        </div>
+        <br>
   
 
 
@@ -319,6 +365,11 @@
             <br>(310) 320-4171
             <br>info@newchallengeministries.com
           </p>
+          <h2><span>
+            <a href="http://www.facebook.com/NewChallengeMinistriesInc"><i class="fa fa-facebook-square"></i></a>
+            <a href ="https://instagram.com/newchallengeministries"><i class="fa fa-instagram"></i></a>
+            <a href ="http://www.youtube.com/playlist?list=PLrVrrzJqZQ0u8MCVdm4sIlTWvu3SJXd1z"><i class="fa fa-youtube"></i></a>
+          </span></h2>
   			</div>
         
   			<div class="col-lg">

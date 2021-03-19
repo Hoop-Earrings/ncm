@@ -16,6 +16,36 @@
     <script src="https://testing.goodtrepreneur.com/bootstrap/js/bootstrap.min.js"></script>
 
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <script>
+        var changeFBPagePlugin = function () {
+            var container_width = Number($('.fb-container').width()).toFixed(0);
+    
+            if (!isNaN(container_width)) {
+                $('.fb-page').attr('data-width', container_width)
+            }
+            if (typeof FB !== 'undefined') {
+                FB.XFBML.parse();
+            }
+        }
+    
+        $(window).on('resize', () => {
+            setTimeout(() => {
+                changeFBPagePlugin() }, 500);
+        })
+    
+        $(window).on('load', () => {
+            setTimeout(() => {
+                changeFBPagePlugin() }, 1500);
+        });
+    </script>
+
+    
+    <script src="https://kit.fontawesome.com/d940519860.js" crossorigin="anonymous"></script>
+    
+    
     <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
 </head>
 <body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
@@ -117,6 +147,11 @@
             <br>(310) 320-4171
             <br>info@newchallengeministries.com
           </p>
+          <h2><span>
+            <a href="http://www.facebook.com/NewChallengeMinistriesInc"><i class="fa fa-facebook-square"></i></a>
+            <a href ="https://instagram.com/newchallengeministries"><i class="fa fa-instagram"></i></a>
+            <a href ="http://www.youtube.com/playlist?list=PLrVrrzJqZQ0u8MCVdm4sIlTWvu3SJXd1z"><i class="fa fa-youtube"></i></a>
+          </span></h2>
   			</div>
         
   			<div class="col-lg">

@@ -34,7 +34,7 @@ $primary: #0000ff;
 	height: 90vh;
 }
 .hero .container {
-  background-color: rgba(251, 251, 251, 0.7);
+  background-color: rgba(251, 251, 251, 0.8);
 	padding: 3rem;
 }
 #about {
@@ -49,6 +49,14 @@ $primary: #0000ff;
 #story {
 	padding-top: 5vh;
 	padding-bottom: 5vh;
+	background-image: url('/images/story_bg.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#story .card {
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 #story .square {
 	background-size: cover;
@@ -58,16 +66,22 @@ $primary: #0000ff;
 #testimonials {
 	padding-top: 5vmin;
 	padding-bottom: 5vmin;
-  background-color: $light;
 }
 #cta {
 	padding-top: 5vmin;
 	padding-bottom: 5vmin;
+	background-image: url('/images/cta_bg.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#cta .card {
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 #news {
 	padding-top: 5vmin;
 	padding-bottom: 5vmin;
-  background-color: $light;
 }
 #events {
   padding-top: 5vmin;
@@ -94,6 +108,8 @@ $primary: #0000ff;
   width: 150px;
   height: 150px;
   object-fit: contain;
+	&:hover {
+		transform: scale(1.05);}
 }
 #sponsor-cta {
   padding-top: 5vh;
@@ -111,6 +127,22 @@ $primary: #0000ff;
   padding-top: 1em;
 	padding-bottom: 1em;
 }
+.fa {
+	color: white;
+	font-size: 1em;
+	margin-left: .5em;
+	margin-right: .5em;
+	&:hover {
+		font-size: 1.2em;
+	}
+}
+// .social-links {
+// 	text-decoration: none;
+// 	font-size: 40px;
+// 	color: black;
+//
+//
+// }
 // .footer-header {
 //   padding-top: 25px;
 //   padding-bottom: 25px;
