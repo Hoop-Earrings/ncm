@@ -108,6 +108,8 @@ $primary: #0000ff;
   width: 150px;
   height: 150px;
   object-fit: contain;
+	&:hover {
+		transform: scale(1.05);}
 }
 #sponsor-cta {
   padding-top: 5vh;
