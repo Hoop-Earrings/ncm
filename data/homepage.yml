@@ -37,7 +37,7 @@ story:
   timelineItem:
     - image : "images/story1.jpg"
       weight : 1
-      text : "Since it’s inception in 1981, New Challenge Ministries has sought to help those struggling with life-controlling substance problems such as drugs and alcohol. In 1979 Pastor John moved to Southern California from Montana and quickly set about founding New Challenge Ministries in 1981 with Reverend Mark Flick and John Snider."
+      text : "In 1979 Pastor John moved to Southern California from Montana and quickly set about founding New Challenge Ministries in 1981 with Reverend Mark Flick and John Snider."
 
     - image : "images/story2.jpg"
       weight : 2
@@ -49,12 +49,13 @@ story:
 
     - image : "images/lauraandteam.png"
       weight : 4
-      text :  "In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people for the first time within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far."
+      text :  "In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far."
 
 ###################### news ########################
 news:
   enable : true
   title : "News"
+  fbnametemp: "Goodtrepreneur"
   fbname: "NewChallengeMinistriesInc"
   insta: "newchallengeministries"
   ytid: "PLrVrrzJqZQ0u8MCVdm4sIlTWvu3SJXd1z"
