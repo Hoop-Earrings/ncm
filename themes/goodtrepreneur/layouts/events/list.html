@@ -24,7 +24,7 @@
 
 {{ if eq ($scratch.Get "upcoming") "true" }}
     <div id = "events" class = "container-fluid text-center">
-        <h1 class="display-6">Upcoming</h1>
+        <h1 class="display-6 event-header">Upcoming events</h1>
         {{ range (.Pages.ByParam "eventdate").Reverse }}
             {{ if (time .Params.Eventdate).After now }}
                     <div class = "container text-center">
@@ -75,11 +75,11 @@
                                 <!-- Event description -->
                                 <p class = "card-text">{{.Content}}</p>
                                 <!-- Call to action links -->
-                            </div>
-                            <div class="d-grid gap-2 d-md-block">
-                                <a class="btn btn-primary" href="https://airtable.com/shrdNLO60kcmJb1ne" role="button">Receive</a>
-                                <a class="btn btn-outline-primary" href="/donate/" role="button">Donate</a>
-                                <a class="btn btn-outline-primary" href="/volunteer/" role="button">Volunteer</a>
+                                <div class="d-grid gap-2 d-md-block">
+                                    <a class="btn btn-primary" href="https://airtable.com/shrdNLO60kcmJb1ne" role="button">Receive</a>
+                                    <a class="btn btn-outline-primary" href="/donate/" role="button">Donate</a>
+                                    <a class="btn btn-outline-primary" href="/volunteer/" role="button">Volunteer</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
 
 {{ if eq ($scratch.Get "previous") "true"}}
     <div id = "previous-events" class = "container-fluid text-center">
-        <h1 class="display-6">Previous</h1>
+        <h1 class="display-6 event-header">Previous events</h1>
         {{ range (.Pages.ByParam "eventdate").Reverse }}
             {{ if (time .Params.Eventdate).Before now }}
                 <div class = "container text-center">
