@@ -8,12 +8,6 @@ banner:
     label : "Donate today!"
     link : "donate"
 
-############################ intro ##########################
-intro:
-  enable : true
-  title : "Watch us in action"
-  videoURL : "https://www.youtube.com/embed/ka3jjVKEMJM"
-
 ############################ about ##########################
 about:
   enable : true
@@ -30,6 +24,54 @@ about:
   name: "Pastor John Hernandez, President and Senior Pastor"
   designation: "New Challenge Ministries"
 
+############################ intro ##########################
+intro:
+  enable : true
+  title : "Watch us in action"
+  videoURL : "https://www.youtube.com/embed/ka3jjVKEMJM"
+
+############################ impact ##########################
+impact:
+  enable : true
+  title : "Our impact"
+  content: "In addition to distributing to the community (foster children, military families, seniors, shelters, homeless distribution organizations), we also support various local organizations, including..."
+  helped:
+    # item loop
+    - name : "BGCA"
+      image : "images/support/bgca.png"
+      url : www.bgca.org
+
+    # item loop
+    - name : "CalGuard"
+      image : "images/support/calguard.png"
+      url : https://calguard.ca.gov/jftb_losalamitos/
+
+    # item loop
+    - name : "Harbor City Food Pantry"
+      image : "images/support/harborcitypantry.png"
+      url : https://linktr.ee/Harborcityfoodpantry
+
+    # item loop
+    - name : "LASC"
+      image : "images/support/lasc.png"
+      url : https://www.lasc.edu/services/veterans
+
+    # item loop
+    - name : "Race"
+      image : "images/support/race.png"
+      url : https://www.race4communities.org
+
+    # item loop
+    - name : "USAF"
+      image : "images/support/usaf.png"
+      url : https://www.losangeles.spaceforce.mil/
+
+    # item loop
+    - name : "YMCA"
+      image : "images/support/ymca.png"
+      url : www.ymca.net
+
+
 ########################## story ##############################
 story:
   enable : true
@@ -37,19 +79,19 @@ story:
   timelineItem:
     - image : "images/story1.jpg"
       weight : 1
-      text : "In 1979 Pastor John moved to Southern California from Montana and quickly set about founding New Challenge Ministries in 1981 with Reverend Mark Flick and John Snider."
+      text : "In 1981, after moving to LA from Montana, Pastor John founded New Challenge Ministries with Reverend Mark Flick and John Snider."
 
     - image : "images/story2.jpg"
       weight : 2
-      text :  "In 1994 Pastor John met his wife, Laura. She quickly became involved in New Challenge Ministries, bringing years of experience in customer service and a heart for helping people, the charity quickly took on the form we know of it today."
+      text :  "In 1994, Pastor John met his wife, Laura. Bringing years of customer service experience and a heart for helping people, Laura helped NCM take on the form we know today."
 
     - image : "images/loadingupproduce.png"
       weight : 3
-      text :  "In 2006, Pastor John and his wife Laura began distributing food to combat the ever-growing problem of food inequality. Their goal is to ensure that everyone who calls, writes, or comes to New Challenge experiences respect, dignity and humanity."
+      text :  "In 2006, Pastor John and Laura began distributing food to combat the ever-growing problem of food inequality. Their goal is to ensure that everyone who comes to NCM experiences respect, dignity and humanity."
 
     - image : "images/lauraandteam.png"
       weight : 4
-      text :  "In 2019, Pastor John and Laura, with the help of their inspiring volunteers, managed to help over 1 million people within the space of one year. With the onset of Covid, their task of helping those in need has not become any easier and their steadfast determination can only take them so far."
+      text :  "By 2019, Pastor John and Laura, with the help of their inspiring volunteers, were helping over 1 million people a year. With the onset of Covid, their task of helping those in need has not become any easier."
 
 ###################### news ########################
 news:

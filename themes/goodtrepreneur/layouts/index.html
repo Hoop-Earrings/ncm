@@ -68,6 +68,28 @@
   {{ end }}
 {{ end }}
 
+<!-- Impact section -->
+{{ if site.Data.homepage.impact.enable }}
+  {{ with site.Data.homepage.impact }}
+    <div id ="impact" class = "container text-center">
+      <h1 class="display-6">{{ .title | markdownify }}</h1>
+      <br>
+      <h4>{{ .content | markdownify }}</h4>
+      <br>
+      <div class = "row row-cols-auto justify-content-center align-items-end">
+        {{ range sort site.Data.homepage.impact.helped "name" }}
+          <div class="col">
+            <a href = "{{ .url }}">
+            <img class = "icon-cloud" src="{{ .image | absURL }}">
+            </a>
+            <!-- <h6>{{ .name }}</h6> -->
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
+
 <!-- Our story section -->
 {{ if site.Data.homepage.story.enable }}
   {{ with site.Data.homepage.story }}
@@ -130,18 +152,18 @@
                 <img src="/images/donatelogo.png" width = 100px height = auto alt="...">
                 <h5 class="card-title">Donate</h5>
                 <p class="card-text">We are currently looking for cash and food donations.</p>
+                <a href="/donate" class="btn btn-primary stretched-link">Donate</a>
               </div>
-              <div class="card-footer"><a href="/donate" class="btn btn-primary stretched-link">Donate</a></div>
             </div>
-            </div>
+          </div>
           <div class="col-sm-4 col-md-3">
             <div class="card h-100">
               <div class="card-body">
                 <img src="/images/volunteerlogo.png" width = 100px height = auto alt="...">
                 <h5 class="card-title">Volunteer</h5>
                 <p class="card-text">Check out our volunteer tab for more info.</p>
+                <a href="/volunteer" class="btn btn-primary stretched-link">Volunteer</a>
               </div>
-              <div class="card-footer"><a href="/volunteer" class="btn btn-primary stretched-link">Volunteer</a></div>
             </div>
           </div>
           <div class="col-sm-4 col-md-3">
@@ -150,8 +172,8 @@
                 <img src="/images/sponsorlogo.png" width = 100px height = auto alt="...">
                 <h5 class="card-title">Sponsor</h5>
                 <p class="card-text">Support from our local businesses for both food and funds.</p>
+                <a href="/sponsor" class="btn btn-primary stretched-link">Sponsor</a>
               </div>
-              <div class="card-footer"><a href="/sponsor" class="btn btn-primary stretched-link">Sponsor</a></div>
             </div>
           </div>
         </div>

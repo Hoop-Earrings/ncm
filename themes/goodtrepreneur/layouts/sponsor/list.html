@@ -16,7 +16,7 @@
     {{ range sort site.Data.sponsor.starsponsors "name" }}
       <div class="col">
         <a href = "{{ .url }}">
-        <img class = "sponsor-images" src="{{ .image | absURL }}">
+        <img class = "icon-cloud" src="{{ .image | absURL }}">
         </a>
         <h6>{{ .name }}</h6>
       </div>
