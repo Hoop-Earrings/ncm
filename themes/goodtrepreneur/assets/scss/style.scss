@@ -133,13 +133,13 @@ $primary: #0000ff;
 	margin-left: .5em;
 	margin-right: .5em;
 	&:hover {
-		font-size: 1.2em;
+		transform: scale(1.05);
 	}
 }
 #previous-events {
   padding-top: 5vh;
   padding-bottom: 5vh;
-  background-color: $light; 
+  background-color: $light;
 }
 .event-header {
   padding-bottom: 3vh;
