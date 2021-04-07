@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name= "description" content="">
     <meta name= "viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     
     
@@ -20,26 +21,48 @@
 
     
     <script>
+
         var changeFBPagePlugin = function () {
             var container_width = Number($('.fb-container').width()).toFixed(0);
+           
     
             if (!isNaN(container_width)) {
                 $('.fb-page').attr('data-width', container_width)
+
+
             }
             if (typeof FB !== 'undefined') {
                 FB.XFBML.parse();
             }
         }
+
+        var changeAirtableSize = function () {
+            var fb_width = Number($('.fb-page').width().toFixed(0))
+            if (fb_width > 500) {
+                $('.airtable-form').attr('width', 500)
+                $('.airtable-form').load(location.href + " .airtable-form")
+
+            } else {
+                $('.airtable-form').attr('width', fb_width + 10)
+                $('.airtable-form').load(location.href + " .airtable-form")
+            }
+        }
     
         $(window).on('resize', () => {
             setTimeout(() => {
-                changeFBPagePlugin() }, 500);
+                changeFBPagePlugin()
+                changeAirtableSize()
+            })  
         })
     
         $(window).on('load', () => {
             setTimeout(() => {
-                changeFBPagePlugin() }, 1500);
+                changeFBPagePlugin()
+                changeAirtableSize() 
+            }, 1500);
         });
+
+      
     </script>
 
     
@@ -48,7 +71,7 @@
     
     <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
 </head>
-<body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
   <div class="container">
     
     <a class="navbar-brand" href="https://testing.goodtrepreneur.com/">
@@ -202,5 +225,15 @@ Sunday - Closed</p>
 		<p>Created by <a href="https://www.goodtrepreneur.com/">Goodtrepreneur</a></p>
 	</div>
 </footer>
-</body>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script></body>
 </html>
