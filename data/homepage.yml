@@ -39,7 +39,7 @@ impact:
     # item loop
     - name : "BGCA"
       image : "images/support/bgca.png"
-      url : www.bgca.org
+      url : https://www.bgca.org
 
     # item loop
     - name : "CalGuard"
@@ -69,7 +69,7 @@ impact:
     # item loop
     - name : "YMCA"
       image : "images/support/ymca.png"
-      url : www.ymca.net
+      url : https://www.ymca.net
 
 
 ########################## story ##############################
@@ -95,7 +95,7 @@ story:
 
 ###################### news ########################
 news:
-  enable : true
+  enable : false
   title : "News"
   fbnametemp: "Goodtrepreneur"
   fbname: "NewChallengeMinistriesInc"

@@ -3,9 +3,9 @@
 
 ### Hugo ###
 # Generated files by hugo
+
 /resources/_gen/
 hugo_stats.json
-
 /node_modules/
 
 # Executable may be added to repository

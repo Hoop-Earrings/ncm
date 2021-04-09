@@ -76,9 +76,10 @@
                                 <p class = "card-text">{{.Content}}</p>
                                 <!-- Call to action links -->
                                 <div class="d-grid gap-2 d-md-block">
-                                    <a class="btn btn-primary" href="https://airtable.com/shrdNLO60kcmJb1ne" role="button">Sign up</a>
-                                    <a class="btn btn-outline-primary" href="/donate/" role="button">Donate</a>
-                                    <a class="btn btn-outline-primary" href="/volunteer/" role="button">Volunteer</a>
+                                    {{ if eq (.Param "signup") true }}<a class="btn btn-primary" href= {{ .Param "signuplink" }} role="button">Sign up</a>{{ end }}
+                                    {{ if eq (.Param "buytickets") true }}<a class="btn btn-primary" href= {{ .Param "buyticketslink" }} role="button">Buy tickets</a>{{ end }}
+                                    {{ if eq (.Param "donate") true }}<a class="btn btn-outline-primary" href="/donate/" role="button">Donate</a>{{ end }}
+                                    {{ if eq (.Param "volunteer") true }}<a class="btn btn-outline-primary" href="/volunteer/" role="button">Volunteer</a>{{ end }}
                                 </div>
                             </div>
                         </div>

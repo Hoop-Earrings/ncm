@@ -5,6 +5,12 @@ eventdate: "2021-02-14"
 starttime:
 endtime:
 location: "456 Seasame Street"
+signup: true
+signuplink: "https://airtable.com/shrdNLO60kcmJb1ne"
+donate: true
+volunteer: true
+buytickets: false
+buyticketslink:
 image: "images/easter2021event.png"
 video: "https://www.youtube.com/embed/ka3jjVKEMJM"
 ---

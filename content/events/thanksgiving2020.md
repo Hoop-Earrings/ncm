@@ -5,6 +5,12 @@ eventdate: "2020-11-23"
 starttime: 12:00pm
 endtime: 3:00pm
 location: "123 Seasame Street"
+signup: true
+signuplink: "https://airtable.com/shrdNLO60kcmJb1ne"
+donate: true
+volunteer: true
+buytickets: false
+buyticketslink:
 image: "images/easter2021event.png"
 video: "https://www.youtube.com/embed/5douIo2gvwU"
 ---
