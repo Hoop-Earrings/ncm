@@ -26,11 +26,6 @@ starsponsors:
     url : https://www.foodcyclela.org/
 
   # sponsor item loop
-  - name : "Food Forward"
-    image : "images/sponsor/star/foodforward.png"
-    url : https://foodforward.org/
-
-  # sponsor item loop
   - name : "Good Community Church"
     image : "images/sponsor/star/GCCCanvasLogo.png"
     url : https://www.torrancegccem.org/

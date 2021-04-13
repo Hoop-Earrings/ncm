@@ -4,7 +4,7 @@ draft: false
 bannerimage: "images/sponsor.png"
 bannercontent: "We are a registered 501(c)(3) non-profit organization. Donations from businesses small and large help us serve our community!"
 starsponsorslabel: "Major Donors"
-othersponsorslabel: "... and our special thanks to the many wonderful organizations that keep up running"
+othersponsorslabel: "... and our special thanks to the many wonderful organizations that keep us running"
 ctatext: "If your business is interested in donating money or goods, please reach out to us."
 buttonlink: "mailto:info@newchallengeministries.com"
 buttonlabel: "Contact us today!"
