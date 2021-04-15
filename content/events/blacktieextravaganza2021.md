@@ -15,4 +15,4 @@ image: "images/blacktie2021.jpg"
 video:
 ---
 
-Join us for a night of fun! Dinner, presentation, dancing and a silent auction. Sponsorships available with recognition in program and during presentation. Event tickets are tax deductible.
+Join us for a night of fun! Dinner, presentation, dancing and a silent auction. Sponsorships available with recognition in program and during presentation.
