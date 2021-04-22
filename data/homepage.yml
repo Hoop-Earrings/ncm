@@ -2,7 +2,7 @@
 banner:
   enable : true
   image : "images/homepage.png"
-  content: "South Bay's largest distribution center, serving over 1,000,000 people in 2020!"
+  content: "South Bay's largest food bank, serving over 1,000,000 people in 2020!"
   button:
     enable : true
     label : "Donate today!"
