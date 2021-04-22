@@ -1,6 +1,11 @@
 ---
 starsponsors:
   # sponsor item loop
+  - name : "Food Finders"
+    image : "images/sponsor/star/foodfinders.png"
+    url : https://foodfinders.org/
+
+  # sponsor item loop
   - name : "Amazon Prime"
     image : "images/sponsor/star/amazonprime.jpg"
     url : https://www.amazon.com/amazonprime

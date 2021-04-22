@@ -57,11 +57,6 @@ impact:
       url : https://www.lasc.edu/services/veterans
 
     # item loop
-    - name : "Race"
-      image : "images/support/race.png"
-      url : https://www.race4communities.org
-
-    # item loop
     - name : "USAF"
       image : "images/support/usaf.png"
       url : https://www.losangeles.spaceforce.mil/

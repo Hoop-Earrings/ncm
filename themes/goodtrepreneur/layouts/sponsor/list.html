@@ -13,7 +13,7 @@
   <h1 class="display-6">{{ .Params.starsponsorslabel }}</h1>
   <br>
   <div class = "row row-cols-auto justify-content-center align-items-end">
-    {{ range sort site.Data.sponsor.starsponsors "name" }}
+    {{ range site.Data.sponsor.starsponsors }}
       <div class="col">
         <a href = "{{ .url }}">
         <img class = "icon-cloud" src="{{ .image | absURL }}">
