@@ -36,7 +36,7 @@
                                     <iframe src="{{ . | safeURL}}" allowfullscreen></iframe>
                                 </div>
                             {{ else }}
-                                <img class = "card-img-top" src="{{.Params.Image | absURL }}" alt="{{ .Title }}">
+                                <a href="{{.Params.Image | absURL }}" target="_blank" title="{{ .Title }}"><img class = "card-img-top" src="{{.Params.Image | absURL }}" alt="{{ .Title }}"></a>
                             {{ end }}
                             <!-- Establishes card body -->
                             <div class = "card-body">
