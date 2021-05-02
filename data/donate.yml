@@ -2,9 +2,9 @@
 donatemoney:
   enable : true
   heading: "Donate money"
-  subheading : "lorem ipsum"
+  subheading : "by credit or debit card"
   buttonlink: "https://checkout.square.site/merchant/MLZ9VX7GD9PCR/checkout/KHWXPPSHGIZAVHG5BIGBAJUZ?src=embed"
-  buttonlabel: "Donate"
+  buttonlabel: "Donate by card"
   paymentmethods: "images/creditbanner.png"
 
 ############################ alternatives ##########################
