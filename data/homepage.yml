@@ -28,13 +28,13 @@ about:
 intro:
   enable : true
   title : "Watch us in action"
-  videoURL : "https://www.youtube.com/embed/nCQixjf-pqY"
+  videoURL : "https://www.youtube.com/embed/U3xBnCmPJ58"
 
 ############################ impact ##########################
 impact:
   enable : true
   title : "Our impact"
-  content: "In addition to distributing to the community (foster children, military families, seniors, shelters, homeless distribution organizations), we also support various local organizations, including..."
+  content: "In addition to distributing to the community (foster children, military families, seniors, shelters, homeless distribution organizations), we also support various local organizations, including:"
   helped:
     # item loop
     - name : "BGCA"
@@ -90,9 +90,8 @@ story:
 
 ###################### news ########################
 news:
-  enable : false
+  enable : true
   title : "News"
-  fbnametemp: "Goodtrepreneur"
   fbname: "NewChallengeMinistriesInc"
   insta: "newchallengeministries"
   ytid: "PLrVrrzJqZQ0u8MCVdm4sIlTWvu3SJXd1z"
