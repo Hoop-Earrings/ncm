@@ -28,54 +28,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     
-    <script>
-
-        var changeFBPagePlugin = function () {
-            var container_width = Number($('.fb-container').width()).toFixed(0);
-           
-    
-            if (!isNaN(container_width)) {
-                $('.fb-page').attr('data-width', container_width)
-
-
-            }
-            if (typeof FB !== 'undefined') {
-                FB.XFBML.parse();
-            }
-        }
-
-        var changeAirtableSize = function () {
-            var fb_width = Number($('.fb-page').width().toFixed(0))
-            if (fb_width > 500) {
-                $('.airtable-form').attr('width', 500)
-                $('.airtable-form').load(location.href + " .airtable-form")
-
-            } else {
-                $('.airtable-form').attr('width', fb_width + 10)
-                $('.airtable-form').load(location.href + " .airtable-form")
-            }
-        }
-    
-        $(window).on('resize', () => {
-            setTimeout(() => {
-                changeFBPagePlugin()
-                changeAirtableSize()
-            })  
-        })
-    
-        $(window).on('load', () => {
-            setTimeout(() => {
-                changeFBPagePlugin()
-                changeAirtableSize() 
-            }, 1500);
-        });
-
-      
-    </script>
-
-    
     <script src="https://kit.fontawesome.com/d940519860.js" crossorigin="anonymous"></script>
-    
+
     
     <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
 
@@ -89,7 +43,7 @@
       gtag('config', 'G-V5BC79X5C5');
     </script>
 </head>
-        <body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+<body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
   <div class="container">
     
     <a class="navbar-brand" href="https://newchallengeministries.com/">
@@ -142,6 +96,10 @@
 
 
  <meta  name="simpledcver"  content="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkb21haW4iOiJuZXdjaGFsbGVuZ2VtaW5pc3RyaWVzLmNvbSIsImV4cCI6MTYxODg3NjgwMH0.Jo2B7PImtRZQb8nOiiH_syMBum4G8I1loJmvOhFSqBA">
+
+
+ <div id="fb-root"></div>
+ <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="im6O5LTK"></script>
 
 
 
@@ -208,7 +166,7 @@
       <br>
       <div class = "col-sm-6 mx-auto">
         <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/nCQixjf-pqY" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/U3xBnCmPJ58" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -221,7 +179,7 @@
     <div id ="impact" class = "container text-center">
       <h1 class="display-6">Our impact</h1>
       <br>
-      <h4>In addition to distributing to the community (foster children, military families, seniors, shelters, homeless distribution organizations), we also support various local organizations, including&hellip;</h4>
+      <p>In addition to distributing to the community (foster children, military families, seniors, shelters, homeless distribution organizations), we also support various local organizations, including:</p>
       <br>
       <div class = "row row-cols-auto justify-content-center align-items-end">
         
@@ -425,6 +383,16 @@
 
 
 
+
+  
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="tooWYNxO"></script>
+    <div id = "news" class="container-fluid  text-center">
+      <h1 class="display-6">News</h1>
+      <br>
+      <div class="fb-page" data-href="https://www.facebook.com/NewChallengeMinistriesInc" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/newchallengeministriesinc" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/newchallengeministriesinc">New Challenge Ministries, Inc.</a></blockquote></div>
+    </div>
+  
 
 
 <footer>

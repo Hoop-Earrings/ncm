@@ -27,54 +27,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     
-    <script>
-
-        var changeFBPagePlugin = function () {
-            var container_width = Number($('.fb-container').width()).toFixed(0);
-           
-    
-            if (!isNaN(container_width)) {
-                $('.fb-page').attr('data-width', container_width)
-
-
-            }
-            if (typeof FB !== 'undefined') {
-                FB.XFBML.parse();
-            }
-        }
-
-        var changeAirtableSize = function () {
-            var fb_width = Number($('.fb-page').width().toFixed(0))
-            if (fb_width > 500) {
-                $('.airtable-form').attr('width', 500)
-                $('.airtable-form').load(location.href + " .airtable-form")
-
-            } else {
-                $('.airtable-form').attr('width', fb_width + 10)
-                $('.airtable-form').load(location.href + " .airtable-form")
-            }
-        }
-    
-        $(window).on('resize', () => {
-            setTimeout(() => {
-                changeFBPagePlugin()
-                changeAirtableSize()
-            })  
-        })
-    
-        $(window).on('load', () => {
-            setTimeout(() => {
-                changeFBPagePlugin()
-                changeAirtableSize() 
-            }, 1500);
-        });
-
-      
-    </script>
-
-    
     <script src="https://kit.fontawesome.com/d940519860.js" crossorigin="anonymous"></script>
-    
+
     
     <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
 
@@ -88,7 +42,7 @@
       gtag('config', 'G-V5BC79X5C5');
     </script>
 </head>
-        <body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+<body><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
   <div class="container">
     
     <a class="navbar-brand" href="https://newchallengeministries.com/">
