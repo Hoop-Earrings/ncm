@@ -4,6 +4,7 @@ title = "New Challenge Ministries"
 theme = "goodtrepreneur"
 description = "New Challenge Ministries"
 relativeURLS = true
+disableKinds = ["taxonomy", "term"]
 
 ############################# Navigation ##############################
 [menu]

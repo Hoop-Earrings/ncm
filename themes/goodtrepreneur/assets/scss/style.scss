@@ -4,21 +4,12 @@ $primary: #0000ff;
 // Bring in Bootstrap
 @import "../bootstrap/scss/bootstrap.scss";
 
-// Custom styles
-// @media screen and (max-width: 800px) {
-//   .footer-section {
-//     display: none !important;
-//   }
-//   .low-res-address {
-//     display: block !important;
-//   }
-//   .normal-address {
-//     display: none !important;
-//   }
-//   .hours-section {
-//     text-align: center !important;
-//   }
-// }
+// Mobile styles
+@media screen and (max-width: 500px) {
+  .fb-page {
+    width: 320px;
+		}
+}
 
 .logo {
 	height: 50px;
