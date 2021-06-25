@@ -5,6 +5,20 @@
       <h1 class="display-4"> {{ .Params.bannercontent | markdownify }} </h1>
     </div>
   </div>
+
+  <!-- Video -->
+  {{ if site.Data.volunteer.introvideo.enable }}
+    {{ with site.Data.volunteer.introvideo }}
+      <div id = "volunteer-intro" class = "container text-center">
+        <div class = "col-sm-8 mx-auto">
+          <div class="ratio ratio-16x9">
+            <iframe src="{{ .url }}" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+
   <!-- Volunteer form -->
   <div id = "volunteer-form" class="container col-sm-8 col-md-6 col-lg-4 text-center">
     {{ if site.Data.volunteer.form.enable }}
@@ -15,6 +29,7 @@
       {{ end }}
     {{ end }}
   </div>
+
   <!-- Alternative -->
   <div id = "volunteer-alt" class = "container-fluid">
     <div class = "container text-center">
